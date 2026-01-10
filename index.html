@@ -3,202 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASHEESH STUDIO - Official Website</title>
+<title>Asheesh Studio - Music • Films • Production</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
-body{background:#050505;color:#fff;overflow-x:hidden;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background:#000;
+    font-family:Arial;
+    color:#fff;
+}
 
 /* HEADER */
 header{
-  text-align:center;
-  padding:25px 10px;
-  background:#000;
-  border-bottom:3px solid #00aaff;
+    text-align:center;
+    padding:20px;
+    background:#000;
+    border-bottom:2px solid #00c8ff;
+    margin-bottom:25px; /* FIX */
 }
-header img{
-  width:120px;
-  height:auto;
-  filter:drop-shadow(0 0 12px #00aaff);
+
+.logo{
+    width:110px;
+    height:auto;
+    margin:auto;
+    display:block;
+    border-radius:10px;
+    box-shadow:0 0 20px #00c8ff;
 }
-h1{
-  font-size:32px;
-  margin-top:10px;
-  background:linear-gradient(90deg,#00c8ff,#0094ff,#00d0ff);
-  -webkit-background-clip:text;
-  color:transparent;
-  font-weight:800;
+
+.title{
+    margin-top:10px;
+    font-size:28px;
+    font-weight:bold;
+    color:#00c8ff;
+    text-shadow:0 0 15px #00c8ff;
+}
+
+/* NAVIGATION */
+nav{
+    text-align:center;
+    padding:12px 0;
+    border-bottom:2px solid #00c8ff55;
+}
+nav a{
+    margin:0 15px;
+    color:#00c8ff;
+    font-size:18px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 /* BANNER */
-.banner{
-  width:100%;
-  max-height:260px;
-  overflow:hidden;
-  margin-top:10px;
+.banner-box{
+    width:100%;
+    padding:0 10px;
 }
-.banner img{
-  width:100%;
-  height:auto;
-  border-bottom:3px solid #00aaff;
+.banner{
+    width:100%;
+    border-radius:12px;
+    border:2px solid #00c8ff;
+    display:block;
+    margin-bottom:25px;
+}
+
+/* SECTIONS */
+section{
+    padding:20px;
+}
+h2{
+    color:#00c8ff;
+    margin-bottom:10px;
+    font-size:24px;
 }
 
 /* POSTER */
 .poster{
-  padding:20px;
-  text-align:center;
-}
-.poster img{
-  width:92%;
-  border-radius:12px;
-  border:2px solid #00aaff;
-  box-shadow:0 0 15px #00aaff;
-}
-
-/* SECTION */
-section{
-  padding:25px;
-  border-bottom:1px solid #0f0f0f;
-}
-h2{
-  font-size:26px;
-  margin-bottom:12px;
-  color:#00c3ff;
-  text-shadow:0 0 10px #00c3ff;
-}
-
-/* BUTTON */
-.btn{
-  display:block;
-  width:90%;
-  margin:15px auto;
-  padding:15px;
-  background:#00baff;
-  color:#000;
-  font-size:19px;
-  font-weight:bold;
-  text-align:center;
-  border-radius:10px;
-  text-decoration:none;
-  box-shadow:0 0 15px #00baff;
+    width:100%;
+    border-radius:12px;
+    border:2px solid #00c8ff;
+    margin:15px 0;
 }
 
 /* GALLERY */
 .gallery img{
-  width:100%;
-  border-radius:10px;
-  border:2px solid #00aaff;
-  margin-bottom:12px;
-}
-
-/* CONTACT FORM */
-form input,form textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  background:#000;
-  border:1px solid #00aaff;
-  color:#fff;
-  border-radius:8px;
-}
-form button{
-  width:100%;
-  padding:14px;
-  background:#00caff;
-  color:#000;
-  font-weight:bold;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:18px;
+    width:100%;
+    border-radius:12px;
+    border:2px solid #00c8ff;
+    margin:10px 0;
 }
 
 /* FOOTER */
 footer{
-  background:#000;
-  padding:20px;
-  border-top:3px solid #00aaff;
-  text-align:center;
-  font-size:15px;
-  opacity:.8;
+    margin-top:30px;
+    padding:15px;
+    text-align:center;
+    border-top:2px solid #00c8ff;
+    color:#00c8ff;
 }
+
 </style>
 </head>
+
 
 <body>
 
 <!-- HEADER -->
 <header>
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
-  <h1>ASHEESH STUDIO</h1>
+    <img class="logo" src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
+    <div class="title">ASHEESH STUDIO</div>
 </header>
 
+<!-- NAV -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#poster">Poster</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <!-- BANNER -->
-<div class="banner">
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png">
+<div class="banner-box">
+    <img class="banner" src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png">
 </div>
+
+<!-- SECTION: ABOUT -->
+<section id="about">
+    <h2>About Asheesh Studio</h2>
+    <p>
+        Asheesh Studio — A professional space for music recordings,
+        video shoots, and full production.  
+        Create • Record • Inspire.
+    </p>
+</section>
 
 <!-- POSTER -->
-<div class="poster">
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
-</div>
-
-<!-- ABOUT -->
-<section>
-  <h2>About Asheesh Studio</h2>
-  <p>
-    Asheesh Studio is a professional music & production studio built by 
-    <b>Asheesh Sarkar</b> — a music composer, songwriter & creative artist.
-    <br><br>
-    Here we create music, videos, short films, editing content & production work.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section>
-  <h2>Our Services</h2>
-  <ul style="line-height:1.9;font-size:18px;">
-    <li>🎵 Music Production</li>
-    <li>🎙️ Songwriting & Composition</li>
-    <li>🎥 Video Editing</li>
-    <li>📸 Poster / Banner Designing</li>
-    <li>📽️ Short Films & Cinematic Shoots</li>
-    <li>🎧 Mixing & Mastering</li>
-    <li>⚡ High-quality Studio Projects</li>
-  </ul>
-</section>
-
-<!-- BOOKING -->
-<section>
-  <h2>Booking / Work Contact</h2>
-  <p style="margin-bottom:10px;">For work, collaboration & projects:</p>
-
-  <a class="btn" href="mailto:asheeshsarkar0@gmail.com">📩 Book Now – Email Us</a>
+<section id="poster">
+    <h2>Official Studio Poster</h2>
+    <img class="poster" src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
 </section>
 
 <!-- GALLERY -->
-<section>
-  <h2>Studio Gallery</h2>
-  <div class="gallery">
-    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshsarkar0-star.github.io/main/file_0000000067c87207a6d265ab32f0a34c.png">
-    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshsarkar0-star.github.io/main/file_00000000862c71fa8ef54358a8a6c2ea.png">
-  </div>
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_0000000066f0720795093ae093469a60.png">
+        <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_000000000b087207b62f50e92555afa3.png">
+    </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section>
-  <h2>Contact Form</h2>
-  <form action="https://formsubmit.co/asheeshsarkar0@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
-    <button>Send Message</button>
-  </form>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <span style="color:#00c8ff;">asheeshsarkar0@gmail.com</span></p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2026 Asheesh Studio — All Rights Reserved.
+    © 2026 Asheesh Studio — All Rights Reserved
 </footer>
 
 </body>
-      </html>
+  </html>
