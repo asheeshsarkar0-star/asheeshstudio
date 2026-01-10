@@ -2,258 +2,112 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Asheesh Music Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asheesh Studio - Official</title>
 
 <style>
-/* ----------------- BASIC ------------------- */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-    background:#0a0a0a;
-    font-family:Arial, sans-serif;
-    color:#fff;
-    overflow-x:hidden;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 
-/* GOLD BUTTON */
-.btn{
-    background:#d4af37;
-    color:#000;
-    padding:14px 25px;
-    border-radius:12px;
-    text-decoration:none;
-    display:inline-block;
-    font-weight:bold;
-    margin:10px 0;
-    box-shadow:0 0 12px #d4af37;
+body{
+  background:#0a0014;
+  color:white;
+  overflow-x:hidden;
 }
 
 /* HEADER */
 header{
-    text-align:center;
-    padding:25px 0;
-    background:#000;
-    border-bottom:2px solid #d4af37;
+  text-align:center;
+  padding:25px;
+  background:#120026;
+  border-bottom:3px solid #7d2cff;
 }
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    background:linear-gradient(90deg,#d4af37,#fff,#d4af37);
-    -webkit-background-clip:text;
-    color:transparent;
+header img{
+  width:150px;
+  filter:drop-shadow(0 0 12px #7d2cff);
 }
 
-/* NAVBAR */
-nav{
-    text-align:center;
-    background:#111;
-    border-bottom:2px solid #d4af37;
-    padding:12px;
-}
-nav a{
-    margin:0 15px;
-    color:#d4af37;
-    font-size:18px;
-    text-decoration:none;
-    font-weight:bold;
+/* BANNER */
+.banner img{
+  width:100%;
+  border-bottom:3px solid #7d2cff;
+  filter:drop-shadow(0 0 18px #7d2cff);
 }
 
-/* SLIDESHOW */
-.slides{width:100%;height:270px;position:relative;overflow:hidden;}
-.slide{
-    width:100%;
-    height:270px;
-    position:absolute;
-    opacity:0;
-    transition:1s;
-}
-.slide img{
-    width:100%;
-    height:270px;
-    object-fit:cover;
-}
-.active{opacity:1;}
-
-/* SECTIONS */
-section{padding:30px;}
+/* SECTION TITLES */
 h2{
-    color:#d4af37;
-    font-size:27px;
-    margin-bottom:12px;
-    text-shadow:0 0 8px #d4af37;
+  font-size:28px;
+  margin:20px 0 10px 0;
+  color:#9c53ff;
+  text-shadow:0 0 10px #7d2cff;
+  text-align:center;
 }
 
-/* SERVICES */
-.services-box{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:15px;
-}
-.service{
-    background:#111;
-    padding:18px;
-    border-radius:12px;
-    border:2px solid #d4af37;
-    font-size:17px;
+/* POSTER */
+.poster img{
+  width:92%;
+  display:block;
+  margin:0 auto;
+  border-radius:12px;
+  border:2px solid #7d2cff;
+  box-shadow:0 0 20px #7d2cff99;
 }
 
-/* SONGS */
-iframe{
-    width:100%;
-    height:210px;
-    border-radius:10px;
-    margin:12px 0;
-    border:2px solid #d4af37;
-}
-
-/* PORTFOLIO */
-.port-item{
-    background:#111;
-    padding:18px;
-    border-radius:12px;
-    margin:10px 0;
-    border:2px solid #d4af37;
-}
-
-/* GALLERY */
-.gallery img{
-    width:100%;
-    border-radius:12px;
-    border:2px solid #d4af37;
-    margin:12px 0;
-}
-
-/* CONTACT FORM */
-input,textarea{
-    width:100%;
-    padding:12px;
-    background:#000;
-    border:1px solid #d4af37;
-    color:#fff;
-    border-radius:10px;
-    margin:10px 0;
-}
-button{
-    width:100%;
-    background:#d4af37;
-    padding:12px;
-    border-radius:10px;
-    color:#000;
-    font-weight:bold;
-    font-size:18px;
+/* ABOUT */
+.about{
+  width:92%;
+  margin:20px auto;
+  font-size:18px;
+  line-height:1.6;
+  background:#14002b;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #7d2cff66;
+  box-shadow:0 0 15px #7d2cff55;
 }
 
 /* FOOTER */
 footer{
-    text-align:center;
-    padding:18px;
-    background:#000;
-    border-top:2px solid #d4af37;
-    margin-top:20px;
+  text-align:center;
+  padding:25px;
+  margin-top:30px;
+  background:#120026;
+  border-top:3px solid #7d2cff;
+  font-size:15px;
+  color:#d9baff;
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOGO -->
 <header>
-<div class="logo">ASHEESH MUSIC STUDIO</div>
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
 </header>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#songs">Songs</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-
-
-<!-- ---------------- SLIDESHOW ---------------- -->
-<div class="slides">
-    <div class="slide active">
-        <img src="https://via.placeholder.com/800x400?text=Studio+Banner+1">
-    </div>
-    <div class="slide">
-        <img src="https://via.placeholder.com/800x400?text=Studio+Banner+2">
-    </div>
+<!-- BANNER -->
+<div class="banner">
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png">
 </div>
 
-<script>
-let i=0;
-setInterval(()=>{
-    let s=document.querySelectorAll(".slide");
-    s.forEach(a=>a.classList.remove("active"));
-    i=(i+1)%s.length;
-    s[i].classList.add("active");
-},3000);
-</script>
-
-
-<!-- ---------------- HOME ---------------- -->
-<section id="home">
-<h2>Welcome</h2>
-<p>Welcome to <b>Asheesh Music Studio</b> — A premium place for music creation, recording, songwriting and full audio production.</p>
-</section>
-
-
-<!-- ---------------- SERVICES ---------------- -->
-<section id="services">
-<h2>Studio Services</h2>
-
-<div class="services-box">
-    <div class="service">🎤 Song Recording</div>
-    <div class="service">🎧 Mixing & Mastering</div>
-    <div class="service">✍️ Lyrics Writing</div>
-    <div class="service">🎼 Music Production</div>
-    <div class="service">📀 Full Song Release Support</div>
+<!-- POSTER -->
+<h2>Official Poster</h2>
+<div class="poster">
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
 </div>
-</section>
 
-
-<!-- ---------------- SONGS ---------------- -->
-<section id="songs">
-<h2>Featured Songs</h2>
-<iframe src="https://www.youtube.com/embed/_FR2jTaPEio"></iframe>
-<iframe src="https://www.youtube.com/embed/H6ofrzz8yXM"></iframe>
-</section>
-
-
-<!-- ---------------- PORTFOLIO ---------------- -->
-<section id="portfolio">
-<h2>Portfolio</h2>
-
-<div class="port-item">🎶 Produced: Romantic Track — 2025</div>
-<div class="port-item">🎶 Background Score for Short Film</div>
-<div class="port-item">🎶 Mixing for Indie Artist</div>
-</section>
-
-
-<!-- ---------------- GALLERY ---------------- -->
-<section id="gallery">
-<h2>Studio Gallery</h2>
-<img src="https://via.placeholder.com/800x450?text=Studio+Photo+1">
-<img src="https://via.placeholder.com/800x450?text=Studio+Photo+2">
-</section>
-
-
-<!-- ---------------- CONTACT ---------------- -->
-<section id="contact">
-<h2>Contact Us</h2>
-
-<form action="https://formsubmit.co/asheeshsarkar0@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-<button>Send Message</button>
-</form>
-
-</section>
-
+<!-- ABOUT SECTION -->
+<h2>About Asheesh Studio</h2>
+<div class="about">
+  Asheesh Studio is a premium creative workspace for music, lyrics,
+  composition, editing and artistic production.
+  <br><br>
+  Yaha har project with passion & perfection banaya jata hai —  
+  from romantic songs to cinematic compositions.
+</div>
 
 <footer>
-© 2026 Asheesh Music Studio — All Rights Reserved.
+© 2026 Asheesh Studio — All Rights Reserved.
 </footer>
 
 </body>
