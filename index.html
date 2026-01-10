@@ -7,159 +7,110 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{
-    background:#000;
-    font-family:Arial;
-    color:#fff;
-}
+body{background:#000814;font-family:Arial;color:#ffffff;}
 
-/* HEADER */
 header{
+    padding:25px 0;
     text-align:center;
-    padding:20px;
-    background:#000;
-    border-bottom:2px solid #00c8ff;
-    margin-bottom:25px; /* FIX */
+    background:#001233;
+    border-bottom:2px solid #00eaff;
 }
-
-.logo{
-    width:110px;
-    height:auto;
-    margin:auto;
-    display:block;
-    border-radius:10px;
-    box-shadow:0 0 20px #00c8ff;
+header img{
+    width:90px;
+    height:90px;
+    border-radius:12px;
+    box-shadow:0 0 20px #00eaff;
 }
-
-.title{
+header h1{
     margin-top:10px;
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
-    color:#00c8ff;
-    text-shadow:0 0 15px #00c8ff;
+    color:#00eaff;
+    text-shadow:0 0 15px #00eaff;
 }
 
-/* NAVIGATION */
-nav{
-    text-align:center;
-    padding:12px 0;
-    border-bottom:2px solid #00c8ff55;
-}
-nav a{
-    margin:0 15px;
-    color:#00c8ff;
-    font-size:18px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* BANNER */
-.banner-box{
-    width:100%;
-    padding:0 10px;
-}
-.banner{
-    width:100%;
-    border-radius:12px;
-    border:2px solid #00c8ff;
-    display:block;
-    margin-bottom:25px;
-}
-
-/* SECTIONS */
 section{
-    padding:20px;
-}
-h2{
-    color:#00c8ff;
-    margin-bottom:10px;
-    font-size:24px;
+    padding:25px;
 }
 
-/* POSTER */
-.poster{
+h2{
+    font-size:26px;
+    margin-bottom:15px;
+    color:#00eaff;
+    text-shadow:0 0 10px #00eaff;
+}
+
+.banner img,
+.poster img{
     width:100%;
     border-radius:12px;
-    border:2px solid #00c8ff;
-    margin:15px 0;
+    border:2px solid #00eaff;
+    box-shadow:0 0 20px #00eaff;
+    margin-bottom:20px;
 }
 
-/* GALLERY */
 .gallery img{
     width:100%;
     border-radius:12px;
-    border:2px solid #00c8ff;
-    margin:10px 0;
+    border:2px solid #00eaff;
+    margin-bottom:20px;
+    box-shadow:0 0 15px #00eaff;
 }
 
-/* FOOTER */
 footer{
-    margin-top:30px;
-    padding:15px;
+    margin-top:40px;
+    padding:20px;
     text-align:center;
-    border-top:2px solid #00c8ff;
-    color:#00c8ff;
+    background:#001233;
+    border-top:2px solid #00eaff;
+    color:#00eaff;
 }
-
 </style>
 </head>
-
 
 <body>
 
 <!-- HEADER -->
 <header>
-    <img class="logo" src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
-    <div class="title">ASHEESH STUDIO</div>
+  <!-- FINAL LOGO -->
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
+  <h1>ASHEESH STUDIO</h1>
 </header>
 
-<!-- NAV -->
-<nav>
-    <a href="#about">About</a>
-    <a href="#poster">Poster</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-</nav>
+<!-- BANNER SECTION -->
+<section class="banner">
+<h2>Studio Banner</h2>
 
-<!-- BANNER -->
-<div class="banner-box">
-    <img class="banner" src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png">
-</div>
+<!-- FINAL BANNER -->
+<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png">
 
-<!-- SECTION: ABOUT -->
-<section id="about">
-    <h2>About Asheesh Studio</h2>
-    <p>
-        Asheesh Studio — A professional space for music recordings,
-        video shoots, and full production.  
-        Create • Record • Inspire.
-    </p>
 </section>
 
-<!-- POSTER -->
-<section id="poster">
-    <h2>Official Studio Poster</h2>
-    <img class="poster" src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
+<!-- POSTER SECTION -->
+<section class="poster">
+<h2>Official Studio Poster</h2>
+
+<!-- FINAL POSTER -->
+<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
+
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY SECTION -->
 <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-        <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_0000000066f0720795093ae093469a60.png">
-        <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_000000000b087207b62f50e92555afa3.png">
-    </div>
+<h2>Studio Gallery</h2>
+
+<!-- GALLERY IMAGE 1 -->
+<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000b31c7207aedc5b8af50a81e4.png">
+
+<!-- GALLERY IMAGE 2 -->
+<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000049f472079083fffc141f3eda.png">
+
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <span style="color:#00c8ff;">asheeshsarkar0@gmail.com</span></p>
-</section>
-
+<!-- FOOTER -->
 <footer>
-    © 2026 Asheesh Studio — All Rights Reserved
+© 2026 Asheesh Studio • All Rights Reserved.
 </footer>
 
 </body>
-  </html>
+</html>
