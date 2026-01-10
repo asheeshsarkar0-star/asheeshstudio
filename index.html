@@ -3,114 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asheesh Studio - Music • Films • Production</title>
+<title>Asheesh Studio – Music • Films • Production</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#000814;font-family:Arial;color:#ffffff;}
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
+/* HEADER */
 header{
-    padding:25px 0;
     text-align:center;
-    background:#001233;
+    padding:25px 0;
     border-bottom:2px solid #00eaff;
+    background:#000;
 }
 header img{
-    width:90px;
-    height:90px;
-    border-radius:12px;
-    box-shadow:0 0 20px #00eaff;
+    width:95px;
+    filter:drop-shadow(0 0 10px #00eaff);
 }
 header h1{
     margin-top:10px;
-    font-size:30px;
-    font-weight:bold;
+    font-size:28px;
     color:#00eaff;
     text-shadow:0 0 15px #00eaff;
 }
 
-section{
-    padding:25px;
-}
-
+/* SECTION TITLES */
 h2{
-    font-size:26px;
-    margin-bottom:15px;
+    margin:20px 0 10px;
+    font-size:24px;
     color:#00eaff;
-    text-shadow:0 0 10px #00eaff;
+    padding-left:10px;
+    text-shadow:0 0 12px #00eaff;
 }
 
-.banner img,
-.poster img{
-    width:100%;
-    border-radius:12px;
+/* MAIN POSTER */
+.poster-box{
+    width:95%;
+    margin:20px auto;
     border:2px solid #00eaff;
+    border-radius:10px;
+    padding:8px;
     box-shadow:0 0 20px #00eaff;
-    margin-bottom:20px;
+}
+.poster-box img{
+    width:100%;
+    border-radius:10px;
 }
 
+/* GALLERY */
+.gallery{
+    width:95%;
+    margin:0 auto;
+}
 .gallery img{
     width:100%;
-    border-radius:12px;
+    margin:12px 0;
     border:2px solid #00eaff;
-    margin-bottom:20px;
+    border-radius:10px;
     box-shadow:0 0 15px #00eaff;
 }
 
+/* ABOUT */
+.about{
+    width:95%;
+    margin:15px auto;
+    font-size:18px;
+    line-height:27px;
+}
+
+/* FOOTER */
 footer{
-    margin-top:40px;
+    margin-top:30px;
     padding:20px;
     text-align:center;
-    background:#001233;
-    border-top:2px solid #00eaff;
     color:#00eaff;
+    border-top:2px solid #00eaff;
 }
 </style>
 </head>
-
 <body>
 
 <!-- HEADER -->
 <header>
-  <!-- FINAL LOGO -->
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
-  <h1>ASHEESH STUDIO</h1>
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
+    <h1>ASHEESH STUDIO</h1>
 </header>
 
-<!-- BANNER SECTION -->
-<section class="banner">
+<!-- MAIN POSTER -->
+<div class="poster-box">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png">
+</div>
+
 <h2>Studio Banner</h2>
+<div class="poster-box">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
+</div>
 
-<!-- FINAL BANNER -->
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png">
+<!-- ABOUT -->
+<h2>About Asheesh Studio</h2>
+<div class="about">
+    Asheesh Studio is a premium music & film production space.
+    We create high-quality songs, video shoots, and full production
+    work with a professional environment.
+</div>
 
-</section>
-
-<!-- POSTER SECTION -->
-<section class="poster">
-<h2>Official Studio Poster</h2>
-
-<!-- FINAL POSTER -->
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
-
-</section>
-
-<!-- GALLERY SECTION -->
-<section id="gallery">
+<!-- GALLERY -->
 <h2>Studio Gallery</h2>
+<div class="gallery">
 
-<!-- GALLERY IMAGE 1 -->
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000b31c7207aedc5b8af50a81e4.png">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000b31c7207aedc5b8af50a81e4.png">
 
-<!-- GALLERY IMAGE 2 -->
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000049f472079083fffc141f3eda.png">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000049f472079083fffc141f3eda.png">
 
-</section>
+</div>
 
-<!-- FOOTER -->
-<footer>
-© 2026 Asheesh Studio • All Rights Reserved.
-</footer>
+<footer>© 2026 Asheesh Studio • All Rights Reserved</footer>
 
 </body>
 </html>
