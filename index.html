@@ -5,313 +5,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asheesh Studio Official</title>
 
-<!-- ICONS -->
-<link rel="icon" type="image/png" href="file_0000000027e471faa86a9842ff80a567.png">
-<link rel="apple-touch-icon" href="file_0000000027e471faa86a9842ff80a567.png">
-
-<!-- OG SHARE -->
-<meta property="og:image" content="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000769c7230853e1deb70bf32c2.png">
-<meta name="twitter:card" content="summary_large_image">
-
 <link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-512.png">
 
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
-</script>
+<meta property="og:image" content="file_00000000769c7230853e1deb70bf32c2.png">
+<meta name="theme-color" content="#7a00ff">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 body{background:#0b0b0b;color:#fff;}
 
-h2{
- font-size:26px;
- color:#d5a7ff;
- border-left:4px solid #7a00ff;
- padding-left:10px;
- margin-bottom:12px;
+header{text-align:center;padding:20px;background:#19002a;
+border-bottom:3px solid #7a00ff;box-shadow:0 0 20px #7a00ff;}
+header h1{font-size:32px;
+background:linear-gradient(90deg,#ffb6ff,#d28dff,#9a3aff,#ffb6ff);
+-webkit-background-clip:text;color:transparent;}
+
+nav{text-align:center;background:#11001b;padding:14px;
+border-bottom:2px solid #7a00ff;position:sticky;top:0;}
+nav a{color:#d5a7ff;text-decoration:none;margin:0 15px;
+font-size:18px;font-weight:bold;}
+
+.hero{text-align:center;padding:40px;background:#12001e;
+border-bottom:2px solid #7a00ff;}
+.hero h2{
+background:linear-gradient(90deg,#ffffff,#d5a7ff);
+-webkit-background-clip:text;color:transparent;font-size:30px;}
+
+section{padding:25px;}
+h2{color:#d5a7ff;border-left:4px solid #7a00ff;padding-left:10px;margin-bottom:15px;}
+
+.box{
+background:#150022;padding:20px;border-radius:12px;
+border:2px solid #7a00ff;box-shadow:0 0 20px #7a00ff55;margin-bottom:15px;
 }
 
-/* HEADER */
-header{
- background:#19002a;
- padding:18px;
- text-align:center;
- border-bottom:3px solid #7a00ff;
- box-shadow:0 0 25px #7a00ffaa;
+/* POPUP */
+#popup{
+position:fixed;top:20px;right:-400px;background:#7a00ff;
+padding:15px;border-radius:10px;color:#fff;z-index:999;
+transition:0.5s;font-weight:bold;box-shadow:0 0 15px #7a00ff;
 }
-header .logo{
- font-size:32px;
- font-weight:bold;
- background:linear-gradient(90deg,#ffb6ff,#d28dff,#9a3aff,#d28dff);
- -webkit-background-clip:text;
- color:transparent;
-}
+#popup.show{right:20px;}
 
-/* HERO */
-.hero{
- text-align:center;
- padding:40px 20px;
- background:#12001e;
- border-bottom:2px solid #7a00ff;
- box-shadow:0 0 25px #7a00ff55;
-}
-.hero h1{
- font-size:32px;
- background:linear-gradient(90deg,#d5a7ff,#ffffff,#d5a7ff);
- -webkit-background-clip:text;color:transparent;
-}
-
-/* NAVBAR */
-nav{
- background:#11001b;
- padding:12px;
- text-align:center;
- position:sticky;
- top:0;
- z-index:10;
- border-bottom:2px solid #7a00ff;
-}
-nav a{
- color:#d5a7ff;
- margin:0 14px;
- text-decoration:none;
- font-weight:bold;
-}
-
-/* GALLERY SLIDESHOW */
-.slideshow-container{
- width:100%;
- position:relative;
- margin:20px auto;
-}
-.slide{
- display:none;
-}
-.slide img{
- width:100%;
- border-radius:12px;
- border:2px solid #7a00ff;
- box-shadow:0 0 20px #7a00ff66;
-}
-.prev, .next{
- cursor:pointer;
- position:absolute;
- top:50%;
- width:auto;
- padding:12px;
- margin-top:-22px;
- color:#fff;
- font-size:24px;
- font-weight:bold;
- background:#7a00ff;
- border-radius:50%;
-}
-.prev{left:10px;}
-.next{right:10px;}
-.dot-box{text-align:center;margin-top:10px;}
-.dot{
- cursor:pointer;
- height:12px;width:12px;
- margin:0 4px;
- background:#7a00ff;
- display:inline-block;
- border-radius:50%;
- opacity:0.4;
-}
-.active-dot{opacity:1;}
-
-/* PRICING CALCULATOR */
-.calc-box{
- background:#150022;
- padding:20px;
- border-radius:12px;
- border:2px solid #7a00ff;
- box-shadow:0 0 20px #7a00ff55;
-}
-select,input{
- width:100%;
- padding:12px;
- margin:10px 0;
- border-radius:8px;
- background:#0b0b0b;
- color:#fff;
- border:1px solid #7a00ff;
-}
-.calc-result{
- margin-top:15px;
- padding:12px;
- font-size:20px;
- text-align:center;
- background:#7a00ff;
- color:#fff;
- border-radius:10px;
-}
-
-/* FOOTER */
-footer{
- text-align:center;
- padding:15px;
- background:#11001b;
- border-top:3px solid #7a00ff;
- margin-top:20px;
-}
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;background:#25D366;
+padding:14px;border-radius:50%;box-shadow:0 0 20px #25D366;}
+.whatsapp img{width:40px;}
 </style>
 </head>
 
 <body>
 
+<div id="popup">Message Sent Successfully!</div>
+
 <header>
- <div class="logo">ASHEESH STUDIO OFFICIAL</div>
+<h1>ASHEESH STUDIO OFFICIAL</h1>
 </header>
 
-<div class="hero">
- <h1>Premium Music Production Studio</h1>
- <p>Lyrics • Mixing • Mastering • Posters</p>
-</div>
-
 <nav>
- <a href="#services">Services</a>
- <a href="#pricing">Pricing</a>
- <a href="#calculator">Calculator</a>
- <a href="#gallery">Gallery</a>
- <a href="#contact">Contact</a>
+<a href="index.html">Home</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="payment.html">Payment</a>
+<a href="#contact">Contact</a>
 </nav>
+
+<div class="hero">
+<h2>Premium Music Production Studio</h2>
+<p>Lyrics • Recording • Mixing • Posters</p>
+</div>
 
 <section id="services">
 <h2>Services</h2>
-<div class="calc-box">🎵 Lyrics Writing</div>
-<div class="calc-box">🎧 Mixing & Mastering</div>
-<div class="calc-box">🎬 Poster Design</div>
-<div class="calc-box">📱 Song Production</div>
-</section>
-
-<section id="pricing">
-<h2>Pricing</h2>
-<div class="calc-box"><b>Lyrics:</b> ₹49 – ₹99</div>
-<div class="calc-box"><b>Poster:</b> ₹29 – ₹89</div>
-<div class="calc-box"><b>Mixing:</b> ₹99 – ₹199</div>
-</section>
-
-<!-- ⭐ PRICING CALCULATOR ⭐ -->
-<section id="calculator">
-<h2>Pricing Calculator</h2>
-
-<div class="calc-box">
- <label>Choose Service</label>
- <select id="service">
-   <option value="0">Select Service</option>
-   <option value="70">Lyrics Writing</option>
-   <option value="50">Poster / Thumbnail</option>
-   <option value="150">Mixing & Mastering</option>
-   <option value="300">Full Song Production</option>
- </select>
-
- <label>Urgent Delivery?</label>
- <select id="urgent">
-   <option value="0">No</option>
-   <option value="1.5">Yes (Extra 50%)</option>
- </select>
-
- <button onclick="calc()">Calculate Price</button>
-
- <div id="result" class="calc-result">₹0</div>
-</div>
-
-<script>
-function calc(){
- let base = Number(document.getElementById("service").value);
- let urgent = Number(document.getElementById("urgent").value);
-
- if(base === 0){
-   document.getElementById("result").innerHTML = "Select a service";
-   return;
- }
-
- let price = base * (urgent === 0 ? 1 : urgent);
- document.getElementById("result").innerHTML = "₹" + price;
-}
-</script>
-
-</section>
-
-<!-- ⭐ GALLERY SLIDESHOW ⭐ -->
-<section id="gallery">
-<h2>Gallery</h2>
-
-<div class="slideshow-container">
-
-  <div class="slide">
-    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000009b0471fd85ccba85cb158a1f.png">
-  </div>
-
-  <div class="slide">
-    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007c9071fd8ebb34a359a3f55a.png">
-  </div>
-
-  <div class="slide">
-    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000965c71f8baaeec6fcbbafa44.png">
-  </div>
-
-  <span class="prev" onclick="plusSlides(-1)">❮</span>
-  <span class="next" onclick="plusSlides(1)">❯</span>
-
-</div>
-
-<div class="dot-box">
- <span class="dot" onclick="currentSlide(1)"></span>
- <span class="dot" onclick="currentSlide(2)"></span>
- <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n){
- showSlides(slideIndex += n);
-}
-
-function currentSlide(n){
- showSlides(slideIndex = n);
-}
-
-function showSlides(n){
- let i;
- let slides = document.getElementsByClassName("slide");
- let dots = document.getElementsByClassName("dot");
-
- if(n > slides.length){slideIndex = 1}
- if(n < 1){slideIndex = slides.length}
-
- for(i=0;i<slides.length;i++){
-   slides[i].style.display = "none";
- }
- for(i=0;i<dots.length;i++){
-   dots[i].className = dots[i].className.replace(" active-dot", "");
- }
-
- slides[slideIndex-1].style.display = "block";
- dots[slideIndex-1].className += " active-dot";
-}
-
-setInterval(()=>{ plusSlides(1); }, 4000);
-</script>
-
+<div class="box">🎵 Lyrics Writing</div>
+<div class="box">🎧 Mixing & Mastering</div>
+<div class="box">🎬 Posters & Thumbnails</div>
+<div class="box">📱 Full Song Production</div>
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
-<div class="calc-box">
-<b>Email:</b> asheeshsarkar0@gmail.com<br>
-<b>WhatsApp:</b> +91 6395463738
+<h2>Auto WhatsApp Message</h2>
+<div class="box">
+<input id="name" placeholder="Your Name" style="width:100%;padding:12px;">
+<input id="work" placeholder="Your Project" style="width:100%;padding:12px;">
+<button onclick="sendMsg()" style="width:100%;padding:12px;
+background:#7a00ff;border:none;color:#fff;font-size:18px;border-radius:10px;">
+Send WhatsApp Message
+</button>
 </div>
 </section>
 
-<footer>
-© 2026 Asheesh Studio Official
-</footer>
+<a class="whatsapp" href="https://wa.me/916395463738" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+<script>
+if("serviceWorker" in navigator){navigator.serviceWorker.register("service-worker.js");}
+
+function popup(){
+document.getElementById("popup").classList.add("show");
+setTimeout(()=>{document.getElementById("popup").classList.remove("show");},2500);
+}
+
+function sendMsg(){
+let n=document.getElementById("name").value;
+let w=document.getElementById("work").value;
+
+let text=`Hello, I am ${n}. I want ${w}.`;
+
+window.open(`https://wa.me/916395463738?text=${encodeURIComponent(text)}`);
+popup();
+}
+</script>
 
 </body>
 </html>
