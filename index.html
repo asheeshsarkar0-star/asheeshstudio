@@ -9,6 +9,13 @@
 <link rel="icon" type="image/png" href="file_0000000027e471faa86a9842ff80a567.png">
 <link rel="apple-touch-icon" href="file_0000000027e471faa86a9842ff80a567.png">
 
+<!-- SOCIAL SHARE OG TAGS -->
+<meta property="og:title" content="Asheesh Studio Official">
+<meta property="og:description" content="Premium Music Production, Lyrics Writing, Mixing, Mastering & Poster Design. High Quality Work.">
+<meta property="og:image" content="banner.png">
+<meta property="og:url" content="https://asheeshstudio.github.io">
+<meta name="twitter:card" content="summary_large_image">
+
 <!-- SEO -->
 <meta name="description" content="Asheesh Studio Official – Music Production, Lyrics Writing, Mixing-Mastering, Poster Design, and Full Song Creation. Premium Quality at Affordable Price.">
 <meta name="keywords" content="Asheesh Studio, Music Production, Lyrics Writing, Mixing, Mastering, Poster Design, Hindi Songs, Studio, Artist">
@@ -67,6 +74,16 @@ body{background:#0b0b0b;color:#fff;}
 
 @keyframes fadeOut{
   to{opacity:0;visibility:hidden;}
+}
+
+/* ================= EXTRA ANIMATIONS ================= */
+section, .box, .gallery img, .hero, header {
+  animation: fadeInUp 1.1s ease;
+}
+
+@keyframes fadeInUp {
+  0% {opacity:0; transform:translateY(20px);}
+  100% {opacity:1; transform:translateY(0);}
 }
 
 /* ================= HEADER ================= */
@@ -238,7 +255,7 @@ footer{
 
 <body>
 
-<!-- LOADING SCREEN -->
+<!-- ============= LOADING SCREEN ============= -->
 <div id="loader">
   <div class="loader-box">
     <img src="file_0000000027e471faa86a9842ff80a567.png" class="loader-icon">
@@ -250,7 +267,6 @@ footer{
  <div class="logo">ASHEESH STUDIO OFFICIAL</div>
 </header>
 
-<!-- HERO SECTION -->
 <div class="hero">
  <h1>Premium Music Production Studio</h1>
  <p>Lyrics • Recording • Mixing • Mastering • Posters</p>
@@ -339,9 +355,13 @@ Our Studio provides high-quality results at affordable pricing.
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
-<!-- LOADER SCRIPT -->
+<!-- LOADING SOUND + HIDE SCRIPT -->
+<audio id="loadAudio" src="intro.mp3" preload="auto"></audio>
+
 <script>
 window.addEventListener("load", () => {
+  document.getElementById("loadAudio").play().catch(()=>{});
+
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
   }, 2200);
