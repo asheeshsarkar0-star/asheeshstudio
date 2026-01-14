@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asheesh Studio Official</title>
 
-<!-- FIX: Remove Browser Purple Theme -->
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 
@@ -13,20 +12,13 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-512.png">
 
-<meta property="og:image" content="file_00000000769c7230853e1deb70bf32c2.png">
-
 <style>
-/* FIX: Remove all margins & browser background */
 html, body {
-    margin: 0;
-    padding: 0;
-    background: #000 !important;
-}
-
-/* BASE STYLE */
-body {
-    font-family: Arial, sans-serif;
-    color: #fff;
+ margin: 0;
+ padding: 0;
+ background: #000 !important;
+ color: #fff;
+ font-family: Arial;
 }
 
 /* POPUP */
@@ -40,83 +32,75 @@ border-radius:10px;
 color:#fff;
 z-index:999;
 transition:0.5s;
-font-weight:bold;
 box-shadow:0 0 15px #7a00ff;
 }
 #popup.show{right:20px;}
 
-/* HEADER FIXED */
+/* FIXED BLACK HEADER */
 header{
- background:#15001f; /* DARK FIXED */
- padding:20px;
+ background:#000;           /* PURE BLACK */
+ padding:18px;
  text-align:center;
- border-bottom:3px solid #7a00ff;
- box-shadow:0 0 20px #7a00ff88;
+ border-bottom:2px solid #7a00ff;
 }
 
+/* HEADER TEXT */
 header h1{
- font-size:32px;
- background:linear-gradient(90deg,#ffb6ff,#d28dff,#9a3aff,#ffb6ff);
+ background:linear-gradient(90deg,#d28dff,#ffffff,#d28dff);
  -webkit-background-clip:text;
  color:transparent;
+ font-size:30px;
 }
 
-/* NAVBAR */
+/* FIX NAVBAR */
 nav{
- background:#11001b;
+ background:#000;      /* PURE BLACK */
  text-align:center;
- padding:14px;
+ padding:10px;
  border-bottom:2px solid #7a00ff;
  position:sticky;
  top:0;
  z-index:50;
 }
-
 nav a{
- color:#d5a7ff;
+ color:#b785ff;
  text-decoration:none;
  margin:0 15px;
- font-size:18px;
+ font-size:17px;
  font-weight:bold;
 }
 
-/* HERO FIXED */
+/* HERO FIX */
 .hero{
+ background:#0b0b0b;    /* NO PURPLE */
  text-align:center;
- padding:40px 20px;
- background:#0d0017; /* FIXED DARKER */
- border-bottom:2px solid #7a00ff;
- box-shadow:0 0 15px #7a00ff44;
+ padding:35px;
+ border-bottom:1px solid #7a00ff;
 }
-
 .hero h2{
- font-size:30px;
- background:linear-gradient(90deg,#ffffff,#d5a7ff);
- -webkit-background-clip:text;
- color:transparent;
-}
-
-section{
- padding:25px;
-}
-
-h2{
+ font-size:28px;
  color:#d5a7ff;
+}
+
+/* SECTION */
+section{padding:22px;}
+h2{
+ color:#c48fff;
  border-left:4px solid #7a00ff;
  padding-left:10px;
  margin-bottom:15px;
 }
 
 .box{
- background:#150022;
- padding:20px;
+ background:#0d0d0d;
+ padding:17px;
  border-radius:12px;
  border:2px solid #7a00ff;
- box-shadow:0 0 20px #7a00ff55;
- margin-bottom:15px;
+ margin-bottom:12px;
+ box-shadow:0 0 12px #7a00ff55;
 }
 
-/* WA BUTTON */
+/* WHATSAPP BUTTON */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -124,7 +108,7 @@ h2{
  background:#25D366;
  padding:14px;
  border-radius:50%;
- box-shadow:0 0 20px #25D366;
+ box-shadow:0 0 15px #25D366;
 }
 .whatsapp img{width:40px;}
 </style>
@@ -164,8 +148,8 @@ h2{
 <h2>Auto WhatsApp Message</h2>
 
 <div class="box">
-<input id="name" placeholder="Your Name" style="width:100%;padding:12px;margin-bottom:12px;">
-<input id="work" placeholder="Your Project" style="width:100%;padding:12px;margin-bottom:12px;">
+<input id="name" placeholder="Your Name" style="width:100%;padding:10px;margin-bottom:10px;">
+<input id="work" placeholder="Your Project" style="width:100%;padding:10px;margin-bottom:10px;">
 
 <button onclick="sendMsg()" style="
 width:100%;
@@ -174,8 +158,9 @@ background:#7a00ff;
 border:none;
 color:#fff;
 border-radius:10px;
-font-size:18px;
-cursor:pointer;">Send WhatsApp Message</button>
+font-size:18px;">
+Send WhatsApp Message
+</button>
 </div>
 </section>
 
@@ -184,25 +169,22 @@ cursor:pointer;">Send WhatsApp Message</button>
 </a>
 
 <script>
-/* Service Worker */
 if("serviceWorker" in navigator){
  navigator.serviceWorker.register("service-worker.js");
 }
 
-/* POPUP */
 function popup(){
  document.getElementById("popup").classList.add("show");
  setTimeout(()=>{document.getElementById("popup").classList.remove("show");},2500);
 }
 
-/* SEND MESSAGE */
 function sendMsg(){
  let n=document.getElementById("name").value;
  let w=document.getElementById("work").value;
 
  let text=`Hello, I am ${n}. I want ${w}.`;
- window.open(`https://wa.me/916395463738?text=${encodeURIComponent(text)}`);
 
+ window.open(`https://wa.me/916395463738?text=${encodeURIComponent(text)}`);
  popup();
 }
 </script>
