@@ -1,4 +1,4 @@
-const CACHE = "studio-v2";
+const CACHE = "studio-v3";
 
 const ASSETS = [
   "/",
@@ -6,24 +6,32 @@ const ASSETS = [
   "/offline.html",
   "/manifest.json",
 
-  "/file_0000000027e471faa86a9842ff80a567.png",   // NEW APP ICON
+  // ICON
+  "/file_0000000027e471faa86a9842ff80a567.png",
 
+  // SHARE CARD
+  "/file_00000000769c7230853e1deb70bf32c2.png",
+
+  // SPLASH IMAGE
+  "/file_000000007f1071fd8ee5386f380d665b.png",
+
+  // WEBSITE IMAGES
   "/banner.png",
   "/g1.png",
   "/g2.png"
 ];
 
-self.addEventListener("install", e => {
-  e.waitUntil(
+self.addEventListener("install", event => {
+  event.waitUntil(
     caches.open(CACHE).then(cache => cache.addAll(ASSETS))
   );
 });
 
-self.addEventListener("activate", e => {
-  e.waitUntil(
+self.addEventListener("activate", event => {
+  event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
-        keys.filter(k => k !== CACHE).map(k => caches.delete(k))
+        keys.filter(key => key !== CACHE).map(key => caches.delete(key))
       )
     )
   );
