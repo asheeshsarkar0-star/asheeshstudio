@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asheesh Studio Official</title>
 
+<!-- SEO -->
+<meta name="description" content="Asheesh Studio Official – Music Production, Lyrics Writing, Mixing-Mastering, Poster Design, and Full Song Creation. Premium Quality at Affordable Price.">
+<meta name="keywords" content="Asheesh Studio, Music Production, Lyrics Writing, Mixing, Mastering, Poster Design, Hindi Songs, Studio, Artist">
+<meta name="theme-color" content="#7a00ff">
+
 <link rel="manifest" href="manifest.json">
 
 <!-- SERVICE WORKER -->
@@ -37,6 +42,39 @@ header .logo{
 @keyframes shine{
  0%{background-position:0%}
  100%{background-position:200%}
+}
+
+/* HERO */
+.hero{
+ text-align:center;
+ padding:40px 20px;
+ background:#12001e;
+ border-bottom:2px solid #7a00ff;
+ box-shadow:0 0 25px #7a00ff55;
+}
+.hero h1{
+ font-size:32px;
+ background:linear-gradient(90deg,#d5a7ff,#ffffff,#d5a7ff);
+ -webkit-background-clip:text;
+ color:transparent;
+}
+.hero p{
+ color:#d5a7ff;
+ margin:10px 0;
+}
+.hero button{
+ background:#7a00ff;
+ padding:12px 20px;
+ border:none;
+ color:#fff;
+ border-radius:10px;
+ font-size:18px;
+ margin-top:15px;
+ cursor:pointer;
+ box-shadow:0 0 20px #7a00ff77;
+}
+.hero button:hover{
+ background:#a94dff;
 }
 
 /* NAVBAR */
@@ -158,6 +196,13 @@ footer{
  <div class="logo">ASHEESH STUDIO OFFICIAL</div>
 </header>
 
+<!-- HERO SECTION -->
+<div class="hero">
+ <h1>Premium Music Production Studio</h1>
+ <p>Lyrics • Recording • Mixing • Mastering • Posters</p>
+ <button onclick="window.location.href='#booking'">Book Your Project</button>
+</div>
+
 <div class="banner">
  <img src="banner.png" alt="">
 </div>
@@ -174,8 +219,8 @@ footer{
 <section id="about">
 <h2>About Asheesh Studio</h2>
 <div class="box">
-We provide Music Production, Lyrics Writing, Mixing-Mastering,
-Poster & Thumbnail Designing with premium quality at low cost.
+We create premium music, lyrics and artwork.  
+Our Studio provides high-quality results at affordable pricing.
 </div>
 </section>
 
@@ -194,10 +239,12 @@ Poster & Thumbnail Designing with premium quality at low cost.
 <b>Lyrics Writing</b>
 <div class="price">₹49 – ₹99</div>
 </div>
+
 <div class="box">
 <b>Poster / Thumbnail</b>
 <div class="price">₹29 – ₹89</div>
 </div>
+
 <div class="box">
 <b>Mixing & Mastering</b>
 <div class="price">₹99 – ₹199</div>
