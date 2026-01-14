@@ -49,13 +49,11 @@ body{background:#0b0b0b;color:#fff;}
 }
 
 .loader-box{text-align:center;}
-
 .loader-icon{
   width:150px;
   filter:drop-shadow(0 0 25px #7a00ff);
   animation:pulse 1.5s infinite ease-in-out;
 }
-
 .loader-text{
   margin-top:18px;
   font-size:24px;
@@ -70,15 +68,12 @@ body{background:#0b0b0b;color:#fff;}
   100%{transform:scale(1);}
 }
 
-@keyframes fadeOut{
-  to{opacity:0;visibility:hidden;}
-}
+@keyframes fadeOut{to{opacity:0;visibility:hidden;}}
 
-/* ================= EXTRA ANIMATIONS ================= */
+/* ================= FADE ANIMATION ================= */
 section, .box, .gallery img, .hero, header {
   animation: fadeInUp 1.1s ease;
 }
-
 @keyframes fadeInUp {
   0% {opacity:0; transform:translateY(25px);}
   100% {opacity:1; transform:translateY(0);}
@@ -119,18 +114,14 @@ header .logo{
  -webkit-background-clip:text;
  color:transparent;
 }
-.hero p{
- color:#d5a7ff;
- margin:10px 0;
-}
+.hero p{color:#d5a7ff;margin:10px 0;}
 .hero button{
  background:#7a00ff;
  padding:12px 20px;
- border:none;
  color:#fff;
  border-radius:10px;
  font-size:18px;
- margin-top:15px;
+ border:none;
  cursor:pointer;
  box-shadow:0 0 20px #7a00ff77;
 }
@@ -171,7 +162,7 @@ h2{
  margin-bottom:12px;
 }
 
-/* ================= BOXES ================= */
+/* ================= BOX ================= */
 .box{
  background:#150022;
  padding:20px;
@@ -181,46 +172,10 @@ h2{
  margin-bottom:15px;
 }
 
-/* ================= PRICING ================= */
-.price{
- font-size:22px;
- font-weight:bold;
- color:#d5a7ff;
-}
-
-/* ================= FORM ================= */
-form{
- background:#150022;
- padding:20px;
- border-radius:12px;
- border:2px solid #7a00ff;
- box-shadow:0 0 20px #7a00ff55;
-}
-input,textarea{
- width:100%;
- padding:12px;
- margin:10px 0;
- background:#0b0b0b;
- border:1px solid #7a00ff;
- color:#fff;
- border-radius:8px;
-}
-button{
- background:#7a00ff;
- color:#fff;
- width:100%;
- padding:12px;
- border-radius:8px;
- font-size:18px;
- border:none;
- cursor:pointer;
-}
-button:hover{background:#a94dff;}
-
 /* ================= GALLERY ================= */
 .gallery img{
  width:100%;
- margin:10px 0;
+ margin:12px 0;
  border-radius:12px;
  border:2px solid #7a00ff;
  box-shadow:0 0 20px #7a00ff55;
@@ -235,7 +190,7 @@ footer{
  margin-top:25px;
 }
 
-/* ================= WHATSAPP BUTTON ================= */
+/* ================= WHATSAPP ================= */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -251,7 +206,7 @@ footer{
 
 <body>
 
-<!-- ============= LOADING SCREEN (SPLASH) ============= -->
+<!-- ============= SPLASH/LOADING SCREEN ============= -->
 <div id="loader">
   <div class="loader-box">
     <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007f1071fd8ee5386f380d665b.png" class="loader-icon">
@@ -286,7 +241,7 @@ footer{
 <h2>About Asheesh Studio</h2>
 <div class="box">
 We create premium music, lyrics and artwork.  
-Our Studio provides high-quality results at affordable pricing.
+High-quality results at affordable pricing.
 </div>
 </section>
 
@@ -301,20 +256,9 @@ Our Studio provides high-quality results at affordable pricing.
 
 <section id="pricing">
 <h2>Pricing</h2>
-<div class="box">
-<b>Lyrics Writing</b>
-<div class="price">₹49 – ₹99</div>
-</div>
-
-<div class="box">
-<b>Poster / Thumbnail</b>
-<div class="price">₹29 – ₹89</div>
-</div>
-
-<div class="box">
-<b>Mixing & Mastering</b>
-<div class="price">₹99 – ₹199</div>
-</div>
+<div class="box"><b>Lyrics Writing</b><div class="price">₹49 – ₹99</div></div>
+<div class="box"><b>Poster / Thumbnail</b><div class="price">₹29 – ₹89</div></div>
+<div class="box"><b>Mixing & Mastering</b><div class="price">₹99 – ₹199</div></div>
 </section>
 
 <section id="booking">
@@ -327,11 +271,20 @@ Our Studio provides high-quality results at affordable pricing.
 </form>
 </section>
 
+<!-- ⭐ FINAL GALLERY SECTION ⭐ -->
 <section id="gallery">
 <h2>Gallery</h2>
 <div class="gallery">
- <img src="g1.png">
- <img src="g2.png">
+
+  <!-- 1st Gallery Image -->
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000009b0471fd85ccba85cb158a1f.png">
+
+  <!-- 2nd Gallery Image -->
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007c9071fd8ebb34a359a3f55a.png">
+
+  <!-- 3rd Gallery Image -->
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000965c71f8baaeec6fcbbafa44.png">
+
 </div>
 </section>
 
@@ -351,7 +304,6 @@ Our Studio provides high-quality results at affordable pricing.
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
-<!-- LOADER SCRIPT -->
 <script>
 window.addEventListener("load", () => {
   setTimeout(() => {
@@ -361,4 +313,4 @@ window.addEventListener("load", () => {
 </script>
 
 </body>
-  </html>
+                                                                         </html>
