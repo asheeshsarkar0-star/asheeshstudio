@@ -28,7 +28,48 @@ if ("serviceWorker" in navigator) {
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 body{background:#0b0b0b;color:#fff;}
 
-/* HEADER */
+/* ================= LOADING SCREEN ================= */
+#loader{
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:#12001e;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  animation:fadeOut 1s ease 2.2s forwards;
+}
+
+.loader-box{
+  text-align:center;
+}
+
+.loader-icon{
+  width:120px;
+  filter:drop-shadow(0 0 20px #7a00ff);
+  animation:pulse 1.5s infinite ease-in-out;
+}
+
+.loader-text{
+  margin-top:15px;
+  font-size:22px;
+  color:#d5a7ff;
+  text-shadow:0 0 10px #7a00ff;
+  animation:fadeIn 2s ease;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+@keyframes fadeOut{
+  to{opacity:0;visibility:hidden;}
+}
+
+/* ================= HEADER ================= */
 header{
  background:#19002a;
  padding:18px;
@@ -49,7 +90,7 @@ header .logo{
  100%{background-position:200%}
 }
 
-/* HERO */
+/* ================= HERO SECTION ================= */
 .hero{
  text-align:center;
  padding:40px 20px;
@@ -82,7 +123,7 @@ header .logo{
  background:#a94dff;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 nav{
  background:#11001b;
  text-align:center;
@@ -100,14 +141,14 @@ nav a{
  font-weight:bold;
 }
 
-/* BANNER */
+/* ================= BANNER ================= */
 .banner img{
  width:100%;
  border-bottom:2px solid #7a00ff;
  box-shadow:0 0 20px #7a00ff77;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
 section{padding:25px;}
 h2{
  font-size:26px;
@@ -117,7 +158,7 @@ h2{
  margin-bottom:12px;
 }
 
-/* BOXES */
+/* ================= BOXES ================= */
 .box{
  background:#150022;
  padding:20px;
@@ -127,14 +168,14 @@ h2{
  margin-bottom:15px;
 }
 
-/* PRICING */
+/* ================= PRICING ================= */
 .price{
  font-size:22px;
  font-weight:bold;
  color:#d5a7ff;
 }
 
-/* FORM */
+/* ================= FORM ================= */
 form{
  background:#150022;
  padding:20px;
@@ -163,7 +204,7 @@ button{
 }
 button:hover{background:#a94dff;}
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 .gallery img{
  width:100%;
  margin:10px 0;
@@ -172,7 +213,7 @@ button:hover{background:#a94dff;}
  box-shadow:0 0 20px #7a00ff55;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
  text-align:center;
  padding:15px;
@@ -181,7 +222,7 @@ footer{
  margin-top:25px;
 }
 
-/* WHATSAPP BUTTON */
+/* ================= WHATSAPP BUTTON ================= */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -196,6 +237,14 @@ footer{
 </head>
 
 <body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-box">
+    <img src="file_0000000027e471faa86a9842ff80a567.png" class="loader-icon">
+    <h1 class="loader-text">ASHEESH STUDIO OFFICIAL</h1>
+  </div>
+</div>
 
 <header>
  <div class="logo">ASHEESH STUDIO OFFICIAL</div>
@@ -290,5 +339,14 @@ Our Studio provides high-quality results at affordable pricing.
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
+<!-- LOADER SCRIPT -->
+<script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+  }, 2200);
+});
+</script>
+
 </body>
-</html>
+  </html>
