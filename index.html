@@ -9,22 +9,12 @@
 <link rel="icon" type="image/png" href="file_0000000027e471faa86a9842ff80a567.png">
 <link rel="apple-touch-icon" href="file_0000000027e471faa86a9842ff80a567.png">
 
-<!-- SOCIAL SHARE OG TAGS -->
-<meta property="og:title" content="Asheesh Studio Official">
-<meta property="og:description" content="Premium Music Production, Lyrics Writing, Mixing, Mastering & Poster Design. High Quality Work.">
+<!-- OG SHARE -->
 <meta property="og:image" content="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000769c7230853e1deb70bf32c2.png">
-<meta property="og:url" content="https://asheeshstudio.github.io">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- SEO -->
-<meta name="description" content="Asheesh Studio Official – Music Production, Lyrics Writing, Mixing-Mastering, Poster Design, and Full Song Creation. Premium Quality at Affordable Price.">
-<meta name="keywords" content="Asheesh Studio, Music Production, Lyrics Writing, Mixing, Mastering, Poster Design, Hindi Songs, Studio, Artist">
-<meta name="theme-color" content="#7a00ff">
-
-<!-- MANIFEST -->
 <link rel="manifest" href="manifest.json">
 
-<!-- SERVICE WORKER -->
 <script>
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
@@ -35,51 +25,15 @@ if ("serviceWorker" in navigator) {
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 body{background:#0b0b0b;color:#fff;}
 
-/* ================= LOADING SCREEN ================= */
-#loader{
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background:#12001e;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-  animation:fadeOut 1s ease 2.2s forwards;
+h2{
+ font-size:26px;
+ color:#d5a7ff;
+ border-left:4px solid #7a00ff;
+ padding-left:10px;
+ margin-bottom:12px;
 }
 
-.loader-box{text-align:center;}
-.loader-icon{
-  width:150px;
-  filter:drop-shadow(0 0 25px #7a00ff);
-  animation:pulse 1.5s infinite ease-in-out;
-}
-.loader-text{
-  margin-top:18px;
-  font-size:24px;
-  color:#d5a7ff;
-  text-shadow:0 0 12px #7a00ff;
-  animation:fadeIn 2s ease;
-}
-
-@keyframes pulse{
-  0%{transform:scale(1);} 
-  50%{transform:scale(1.1);} 
-  100%{transform:scale(1);}
-}
-
-@keyframes fadeOut{to{opacity:0;visibility:hidden;}}
-
-/* ================= FADE ANIMATION ================= */
-section, .box, .gallery img, .hero, header {
-  animation: fadeInUp 1.1s ease;
-}
-@keyframes fadeInUp {
-  0% {opacity:0; transform:translateY(25px);}
-  100% {opacity:1; transform:translateY(0);}
-}
-
-/* ================= HEADER ================= */
+/* HEADER */
 header{
  background:#19002a;
  padding:18px;
@@ -90,17 +44,12 @@ header{
 header .logo{
  font-size:32px;
  font-weight:bold;
- background:linear-gradient(90deg,#ffb6ff,#d28dff,#9a3aff,#d28dff,#ffb6ff);
+ background:linear-gradient(90deg,#ffb6ff,#d28dff,#9a3aff,#d28dff);
  -webkit-background-clip:text;
  color:transparent;
- animation:shine 3s infinite linear;
-}
-@keyframes shine{
- 0%{background-position:0%}
- 100%{background-position:200%}
 }
 
-/* ================= HERO SECTION ================= */
+/* HERO */
 .hero{
  text-align:center;
  padding:40px 20px;
@@ -111,108 +60,107 @@ header .logo{
 .hero h1{
  font-size:32px;
  background:linear-gradient(90deg,#d5a7ff,#ffffff,#d5a7ff);
- -webkit-background-clip:text;
- color:transparent;
+ -webkit-background-clip:text;color:transparent;
 }
-.hero p{color:#d5a7ff;margin:10px 0;}
-.hero button{
- background:#7a00ff;
- padding:12px 20px;
- color:#fff;
- border-radius:10px;
- font-size:18px;
- border:none;
- cursor:pointer;
- box-shadow:0 0 20px #7a00ff77;
-}
-.hero button:hover{background:#a94dff;}
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 nav{
  background:#11001b;
- text-align:center;
  padding:12px;
+ text-align:center;
  position:sticky;
  top:0;
- z-index:20;
+ z-index:10;
  border-bottom:2px solid #7a00ff;
 }
 nav a{
  color:#d5a7ff;
- text-decoration:none;
  margin:0 14px;
- font-size:18px;
+ text-decoration:none;
  font-weight:bold;
 }
 
-/* ================= BANNER ================= */
-.banner img{
+/* GALLERY SLIDESHOW */
+.slideshow-container{
  width:100%;
- border-bottom:2px solid #7a00ff;
- box-shadow:0 0 20px #7a00ff77;
+ position:relative;
+ margin:20px auto;
 }
-
-/* ================= SECTION ================= */
-section{padding:25px;}
-h2{
- font-size:26px;
- color:#d5a7ff;
- border-left:4px solid #7a00ff;
- padding-left:10px;
- margin-bottom:12px;
+.slide{
+ display:none;
 }
+.slide img{
+ width:100%;
+ border-radius:12px;
+ border:2px solid #7a00ff;
+ box-shadow:0 0 20px #7a00ff66;
+}
+.prev, .next{
+ cursor:pointer;
+ position:absolute;
+ top:50%;
+ width:auto;
+ padding:12px;
+ margin-top:-22px;
+ color:#fff;
+ font-size:24px;
+ font-weight:bold;
+ background:#7a00ff;
+ border-radius:50%;
+}
+.prev{left:10px;}
+.next{right:10px;}
+.dot-box{text-align:center;margin-top:10px;}
+.dot{
+ cursor:pointer;
+ height:12px;width:12px;
+ margin:0 4px;
+ background:#7a00ff;
+ display:inline-block;
+ border-radius:50%;
+ opacity:0.4;
+}
+.active-dot{opacity:1;}
 
-/* ================= BOX ================= */
-.box{
+/* PRICING CALCULATOR */
+.calc-box{
  background:#150022;
  padding:20px;
  border-radius:12px;
  border:2px solid #7a00ff;
- box-shadow:0 0 20px #7a00ff66;
- margin-bottom:15px;
-}
-
-/* ================= GALLERY ================= */
-.gallery img{
- width:100%;
- margin:12px 0;
- border-radius:12px;
- border:2px solid #7a00ff;
  box-shadow:0 0 20px #7a00ff55;
 }
+select,input{
+ width:100%;
+ padding:12px;
+ margin:10px 0;
+ border-radius:8px;
+ background:#0b0b0b;
+ color:#fff;
+ border:1px solid #7a00ff;
+}
+.calc-result{
+ margin-top:15px;
+ padding:12px;
+ font-size:20px;
+ text-align:center;
+ background:#7a00ff;
+ color:#fff;
+ border-radius:10px;
+}
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
  text-align:center;
  padding:15px;
  background:#11001b;
  border-top:3px solid #7a00ff;
- margin-top:25px;
+ margin-top:20px;
 }
-
-/* ================= WHATSAPP ================= */
-.whatsapp{
- position:fixed;
- bottom:20px;
- right:20px;
- background:#25D366;
- padding:14px;
- border-radius:50%;
- box-shadow:0 0 20px #25D366;
-}
-.whatsapp img{width:40px;}
 </style>
 </head>
 
 <body>
-
-<!-- ============= SPLASH/LOADING SCREEN ============= -->
-<div id="loader">
-  <div class="loader-box">
-    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007f1071fd8ee5386f380d665b.png" class="loader-icon">
-    <h1 class="loader-text">ASHEESH STUDIO OFFICIAL</h1>
-  </div>
-</div>
 
 <header>
  <div class="logo">ASHEESH STUDIO OFFICIAL</div>
@@ -220,97 +168,150 @@ footer{
 
 <div class="hero">
  <h1>Premium Music Production Studio</h1>
- <p>Lyrics • Recording • Mixing • Mastering • Posters</p>
- <button onclick="window.location.href='#booking'">Book Your Project</button>
-</div>
-
-<div class="banner">
- <img src="banner.png" alt="">
+ <p>Lyrics • Mixing • Mastering • Posters</p>
 </div>
 
 <nav>
- <a href="#about">About</a>
  <a href="#services">Services</a>
  <a href="#pricing">Pricing</a>
- <a href="#booking">Booking</a>
+ <a href="#calculator">Calculator</a>
  <a href="#gallery">Gallery</a>
  <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
-<h2>About Asheesh Studio</h2>
-<div class="box">
-We create premium music, lyrics and artwork.  
-High-quality results at affordable pricing.
-</div>
-</section>
-
 <section id="services">
 <h2>Services</h2>
-<div class="box">🎵 Lyrics Writing</div>
-<div class="box">🎤 Vocal Recording (Online)</div>
-<div class="box">🎧 Mixing & Mastering</div>
-<div class="box">🎬 Poster & Thumbnail Design</div>
-<div class="box">📱 Full Song Production</div>
+<div class="calc-box">🎵 Lyrics Writing</div>
+<div class="calc-box">🎧 Mixing & Mastering</div>
+<div class="calc-box">🎬 Poster Design</div>
+<div class="calc-box">📱 Song Production</div>
 </section>
 
 <section id="pricing">
 <h2>Pricing</h2>
-<div class="box"><b>Lyrics Writing</b><div class="price">₹49 – ₹99</div></div>
-<div class="box"><b>Poster / Thumbnail</b><div class="price">₹29 – ₹89</div></div>
-<div class="box"><b>Mixing & Mastering</b><div class="price">₹99 – ₹199</div></div>
+<div class="calc-box"><b>Lyrics:</b> ₹49 – ₹99</div>
+<div class="calc-box"><b>Poster:</b> ₹29 – ₹89</div>
+<div class="calc-box"><b>Mixing:</b> ₹99 – ₹199</div>
 </section>
 
-<section id="booking">
-<h2>Book Your Project</h2>
-<form action="https://formsubmit.co/asheeshsarkar0@gmail.com" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="text" name="service" placeholder="Service You Want" required>
-<textarea name="details" rows="4" placeholder="Project Details" required></textarea>
-<button type="submit">Submit</button>
-</form>
+<!-- ⭐ PRICING CALCULATOR ⭐ -->
+<section id="calculator">
+<h2>Pricing Calculator</h2>
+
+<div class="calc-box">
+ <label>Choose Service</label>
+ <select id="service">
+   <option value="0">Select Service</option>
+   <option value="70">Lyrics Writing</option>
+   <option value="50">Poster / Thumbnail</option>
+   <option value="150">Mixing & Mastering</option>
+   <option value="300">Full Song Production</option>
+ </select>
+
+ <label>Urgent Delivery?</label>
+ <select id="urgent">
+   <option value="0">No</option>
+   <option value="1.5">Yes (Extra 50%)</option>
+ </select>
+
+ <button onclick="calc()">Calculate Price</button>
+
+ <div id="result" class="calc-result">₹0</div>
+</div>
+
+<script>
+function calc(){
+ let base = Number(document.getElementById("service").value);
+ let urgent = Number(document.getElementById("urgent").value);
+
+ if(base === 0){
+   document.getElementById("result").innerHTML = "Select a service";
+   return;
+ }
+
+ let price = base * (urgent === 0 ? 1 : urgent);
+ document.getElementById("result").innerHTML = "₹" + price;
+}
+</script>
+
 </section>
 
-<!-- ⭐ FINAL GALLERY SECTION ⭐ -->
+<!-- ⭐ GALLERY SLIDESHOW ⭐ -->
 <section id="gallery">
 <h2>Gallery</h2>
-<div class="gallery">
 
-  <!-- 1st Gallery Image -->
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000009b0471fd85ccba85cb158a1f.png">
+<div class="slideshow-container">
 
-  <!-- 2nd Gallery Image -->
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007c9071fd8ebb34a359a3f55a.png">
+  <div class="slide">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000009b0471fd85ccba85cb158a1f.png">
+  </div>
 
-  <!-- 3rd Gallery Image -->
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000965c71f8baaeec6fcbbafa44.png">
+  <div class="slide">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007c9071fd8ebb34a359a3f55a.png">
+  </div>
+
+  <div class="slide">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000965c71f8baaeec6fcbbafa44.png">
+  </div>
+
+  <span class="prev" onclick="plusSlides(-1)">❮</span>
+  <span class="next" onclick="plusSlides(1)">❯</span>
 
 </div>
+
+<div class="dot-box">
+ <span class="dot" onclick="currentSlide(1)"></span>
+ <span class="dot" onclick="currentSlide(2)"></span>
+ <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n){
+ showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+ showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+ let i;
+ let slides = document.getElementsByClassName("slide");
+ let dots = document.getElementsByClassName("dot");
+
+ if(n > slides.length){slideIndex = 1}
+ if(n < 1){slideIndex = slides.length}
+
+ for(i=0;i<slides.length;i++){
+   slides[i].style.display = "none";
+ }
+ for(i=0;i<dots.length;i++){
+   dots[i].className = dots[i].className.replace(" active-dot", "");
+ }
+
+ slides[slideIndex-1].style.display = "block";
+ dots[slideIndex-1].className += " active-dot";
+}
+
+setInterval(()=>{ plusSlides(1); }, 4000);
+</script>
+
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<div class="box">
+<div class="calc-box">
 <b>Email:</b> asheeshsarkar0@gmail.com<br>
 <b>WhatsApp:</b> +91 6395463738
 </div>
 </section>
 
 <footer>
-© 2026 Asheesh Studio Official | All Rights Reserved.
+© 2026 Asheesh Studio Official
 </footer>
 
-<a class="whatsapp" href="https://wa.me/916395463738" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
-
-<script>
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-  }, 2200);
-});
-</script>
-
 </body>
-                                                                         </html>
+</html>
