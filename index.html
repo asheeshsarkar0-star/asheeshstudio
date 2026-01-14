@@ -12,7 +12,7 @@
 <!-- SOCIAL SHARE OG TAGS -->
 <meta property="og:title" content="Asheesh Studio Official">
 <meta property="og:description" content="Premium Music Production, Lyrics Writing, Mixing, Mastering & Poster Design. High Quality Work.">
-<meta property="og:image" content="banner.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000769c7230853e1deb70bf32c2.png">
 <meta property="og:url" content="https://asheeshstudio.github.io">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -48,27 +48,25 @@ body{background:#0b0b0b;color:#fff;}
   animation:fadeOut 1s ease 2.2s forwards;
 }
 
-.loader-box{
-  text-align:center;
-}
+.loader-box{text-align:center;}
 
 .loader-icon{
-  width:120px;
-  filter:drop-shadow(0 0 20px #7a00ff);
+  width:150px;
+  filter:drop-shadow(0 0 25px #7a00ff);
   animation:pulse 1.5s infinite ease-in-out;
 }
 
 .loader-text{
-  margin-top:15px;
-  font-size:22px;
+  margin-top:18px;
+  font-size:24px;
   color:#d5a7ff;
-  text-shadow:0 0 10px #7a00ff;
+  text-shadow:0 0 12px #7a00ff;
   animation:fadeIn 2s ease;
 }
 
 @keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.1);}
+  0%{transform:scale(1);} 
+  50%{transform:scale(1.1);} 
   100%{transform:scale(1);}
 }
 
@@ -82,7 +80,7 @@ section, .box, .gallery img, .hero, header {
 }
 
 @keyframes fadeInUp {
-  0% {opacity:0; transform:translateY(20px);}
+  0% {opacity:0; transform:translateY(25px);}
   100% {opacity:1; transform:translateY(0);}
 }
 
@@ -136,9 +134,7 @@ header .logo{
  cursor:pointer;
  box-shadow:0 0 20px #7a00ff77;
 }
-.hero button:hover{
- background:#a94dff;
-}
+.hero button:hover{background:#a94dff;}
 
 /* ================= NAVBAR ================= */
 nav{
@@ -255,10 +251,10 @@ footer{
 
 <body>
 
-<!-- ============= LOADING SCREEN ============= -->
+<!-- ============= LOADING SCREEN (SPLASH) ============= -->
 <div id="loader">
   <div class="loader-box">
-    <img src="file_0000000027e471faa86a9842ff80a567.png" class="loader-icon">
+    <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007f1071fd8ee5386f380d665b.png" class="loader-icon">
     <h1 class="loader-text">ASHEESH STUDIO OFFICIAL</h1>
   </div>
 </div>
@@ -355,13 +351,9 @@ Our Studio provides high-quality results at affordable pricing.
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
-<!-- LOADING SOUND + HIDE SCRIPT -->
-<audio id="loadAudio" src="intro.mp3" preload="auto"></audio>
-
+<!-- LOADER SCRIPT -->
 <script>
 window.addEventListener("load", () => {
-  document.getElementById("loadAudio").play().catch(()=>{});
-
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
   }, 2200);
