@@ -3,149 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asheesh Studio - Official</title>
+<title>Asheesh Studio Official</title>
+
+<link rel="manifest" href="manifest.json">
+
+<!-- SERVICE WORKER -->
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
-
-body{
- background:#0b0b0b;
- color:#fff;
-}
+body{background:#0b0b0b;color:#fff;}
 
 /* HEADER */
 header{
- width:100%;
- padding:15px 0;
- background:#1a0028;
+ background:#19002a;
+ padding:18px;
  text-align:center;
  border-bottom:3px solid #7a00ff;
+ box-shadow:0 0 25px #7a00ffaa;
 }
-header img{
- width:150px;
+header .logo{
+ font-size:32px;
+ font-weight:bold;
+ background:linear-gradient(90deg,#ffb6ff,#d28dff,#9a3aff,#d28dff,#ffb6ff);
+ -webkit-background-clip:text;
+ color:transparent;
+ animation:shine 3s infinite linear;
+}
+@keyframes shine{
+ 0%{background-position:0%}
+ 100%{background-position:200%}
+}
+
+/* NAVBAR */
+nav{
+ background:#11001b;
+ text-align:center;
+ padding:12px;
+ position:sticky;
+ top:0;
+ z-index:20;
+ border-bottom:2px solid #7a00ff;
+}
+nav a{
+ color:#d5a7ff;
+ text-decoration:none;
+ margin:0 14px;
+ font-size:18px;
+ font-weight:bold;
 }
 
 /* BANNER */
 .banner img{
  width:100%;
- border-bottom:3px solid #7a00ff;
+ border-bottom:2px solid #7a00ff;
+ box-shadow:0 0 20px #7a00ff77;
 }
 
-/* NAVBAR */
-nav{
- background:#12001c;
- padding:12px;
- text-align:center;
- border-bottom:1px solid #7a00ff;
-}
-nav a{
- color:#c08dff;
- text-decoration:none;
- margin:0 12px;
- font-weight:bold;
- font-size:18px;
-}
-
-/* SECTIONS */
-section{
- padding:25px;
-}
+/* SECTION */
+section{padding:25px;}
 h2{
  font-size:26px;
- color:#c08dff;
+ color:#d5a7ff;
  border-left:4px solid #7a00ff;
  padding-left:10px;
+ margin-bottom:12px;
+}
+
+/* BOXES */
+.box{
+ background:#150022;
+ padding:20px;
+ border-radius:12px;
+ border:2px solid #7a00ff;
+ box-shadow:0 0 20px #7a00ff66;
  margin-bottom:15px;
 }
 
-/* POSTER */
-.poster img{
- width:100%;
+/* PRICING */
+.price{
+ font-size:22px;
+ font-weight:bold;
+ color:#d5a7ff;
+}
+
+/* FORM */
+form{
+ background:#150022;
+ padding:20px;
  border-radius:12px;
  border:2px solid #7a00ff;
+ box-shadow:0 0 20px #7a00ff55;
 }
+input,textarea{
+ width:100%;
+ padding:12px;
+ margin:10px 0;
+ background:#0b0b0b;
+ border:1px solid #7a00ff;
+ color:#fff;
+ border-radius:8px;
+}
+button{
+ background:#7a00ff;
+ color:#fff;
+ width:100%;
+ padding:12px;
+ border-radius:8px;
+ font-size:18px;
+ border:none;
+ cursor:pointer;
+}
+button:hover{background:#a94dff;}
 
 /* GALLERY */
 .gallery img{
  width:100%;
- border-radius:12px;
- border:2px solid #7a00ff;
  margin:10px 0;
-}
-
-/* SERVICES */
-.service-box{
- background:#150021;
- padding:20px;
  border-radius:12px;
  border:2px solid #7a00ff;
- margin-bottom:12px;
-}
-
-/* PRICING */
-.price-box{
- background:#1d002e;
- padding:20px;
- border-radius:12px;
- margin-bottom:15px;
- border:2px solid #7a00ff;
-}
-.price{
- color:#c08dff;
- font-size:22px;
- font-weight:bold;
- margin-top:8px;
-}
-
-/* BOOKING FORM */
-form{
- background:#150021;
- padding:20px;
- border-radius:12px;
- border:2px solid #7a00ff;
-}
-input,textarea{
- width:100%;
- margin:10px 0;
- padding:12px;
- border-radius:8px;
- background:#0b0b0b;
- border:1px solid #7a00ff;
- color:#fff;
-}
-button{
- width:100%;
- padding:12px;
- background:#7a00ff;
- color:#fff;
- font-size:18px;
- border-radius:8px;
- margin-top:10px;
- border:none;
- cursor:pointer;
-}
-button:hover{
- background:#9e3dff;
-}
-
-/* CONTACT */
-.contact-box{
- background:#150021;
- padding:20px;
- border-radius:12px;
- border:2px solid #7a00ff;
+ box-shadow:0 0 20px #7a00ff55;
 }
 
 /* FOOTER */
 footer{
  text-align:center;
  padding:15px;
- background:#12001c;
- margin-top:30px;
+ background:#11001b;
  border-top:3px solid #7a00ff;
+ margin-top:25px;
 }
 
-/* WHATSAPP FLOAT BUTTON */
+/* WHATSAPP BUTTON */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -153,22 +146,20 @@ footer{
  background:#25D366;
  padding:14px;
  border-radius:50%;
+ box-shadow:0 0 20px #25D366;
 }
-.whatsapp img{
- width:40px;
-}
+.whatsapp img{width:40px;}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
+ <div class="logo">ASHEESH STUDIO OFFICIAL</div>
 </header>
 
-<!-- BANNER -->
 <div class="banner">
- <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_0000000066f0720795093ae093469a60.png">
+ <img src="banner.png" alt="">
 </div>
 
 <nav>
@@ -182,88 +173,70 @@ footer{
 
 <section id="about">
 <h2>About Asheesh Studio</h2>
-<p>
-Asheesh Studio – Music Production, Lyrics Writing, Mixing-Mastering,  
-Creative Designing & Song Making.  
-Premium Quality Work at Affordable Price.
-</p>
-</section>
-
-<section class="poster">
-<h2>Official Poster</h2>
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_000000000b087207b62f50e92555afa3.png">
+<div class="box">
+We provide Music Production, Lyrics Writing, Mixing-Mastering,
+Poster & Thumbnail Designing with premium quality at low cost.
+</div>
 </section>
 
 <section id="services">
-<h2>Studio Services</h2>
-
-<div class="service-box">🎵 Song Lyrics Writing</div>
-<div class="service-box">🎤 Vocals Recording (Online)</div>
-<div class="service-box">🎧 Mixing & Mastering</div>
-<div class="service-box">🎬 Poster Thumbnails & Artwork</div>
-<div class="service-box">📱 Full Song Production</div>
-
+<h2>Services</h2>
+<div class="box">🎵 Lyrics Writing</div>
+<div class="box">🎤 Vocal Recording (Online)</div>
+<div class="box">🎧 Mixing & Mastering</div>
+<div class="box">🎬 Poster & Thumbnail Design</div>
+<div class="box">📱 Full Song Production</div>
 </section>
 
 <section id="pricing">
 <h2>Pricing</h2>
-
-<div class="price-box">
- 🔹 <b>Lyrics Writing</b>
- <div class="price">₹49 – ₹99</div>
+<div class="box">
+<b>Lyrics Writing</b>
+<div class="price">₹49 – ₹99</div>
 </div>
-
-<div class="price-box">
- 🔹 <b>Poster / Thumbnail</b>
- <div class="price">₹29 – ₹89</div>
+<div class="box">
+<b>Poster / Thumbnail</b>
+<div class="price">₹29 – ₹89</div>
 </div>
-
-<div class="price-box">
- 🔹 <b>Mixing & Mastering</b>
- <div class="price">₹99 – ₹199</div>
+<div class="box">
+<b>Mixing & Mastering</b>
+<div class="price">₹99 – ₹199</div>
 </div>
-
 </section>
 
 <section id="booking">
 <h2>Book Your Project</h2>
-
 <form action="https://formsubmit.co/asheeshsarkar0@gmail.com" method="POST">
- <input type="text" name="name" placeholder="Your Name" required>
- <input type="text" name="service" placeholder="Service You Want" required>
- <textarea name="details" rows="4" placeholder="Project Details" required></textarea>
- <button type="submit">Submit Booking</button>
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" name="service" placeholder="Service You Want" required>
+<textarea name="details" rows="4" placeholder="Project Details" required></textarea>
+<button type="submit">Submit</button>
 </form>
-
 </section>
 
 <section id="gallery">
 <h2>Gallery</h2>
-
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_00000000b31c7207aedc5b8af50a81e4.png">
-
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/main/file_0000000049f472079083fffc141f3eda.png">
-
+<div class="gallery">
+ <img src="g1.png">
+ <img src="g2.png">
+</div>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-
-<div class="contact-box">
- <p><b>Email:</b> asheeshsarkar0@gmail.com</p>
- <p><b>WhatsApp:</b> +91 6395463738</p>
+<div class="box">
+<b>Email:</b> asheeshsarkar0@gmail.com<br>
+<b>WhatsApp:</b> +91 6395463738
 </div>
-
 </section>
 
 <footer>
-© 2026 Asheesh Studio | All Rights Reserved.
+© 2026 Asheesh Studio Official | All Rights Reserved.
 </footer>
 
-<!-- WHATSAPP FLOAT -->
 <a class="whatsapp" href="https://wa.me/916395463738" target="_blank">
- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
 </body>
-    </html>
+</html>
