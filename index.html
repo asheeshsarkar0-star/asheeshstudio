@@ -20,7 +20,7 @@ body {
  overflow-x:hidden;
 }
 
-/* ========== HEADER ========== */
+/* HEADER */
 header {
  background:#000;
  padding:15px;
@@ -35,7 +35,7 @@ header img{
  filter:drop-shadow(0 0 8px #8a2eff);
 }
 
-/* ========== NAVBAR ========== */
+/* NAVBAR */
 nav{
  background:#000;
  text-align:center;
@@ -57,17 +57,19 @@ nav a:hover{
  text-shadow:0 0 10px #8a2eff;
 }
 
-/* ========== HERO BANNER ========== */
+/* NEW BANNER */
 .hero-banner{
  width:100%;
- height:340px;
- background:url("https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png") no-repeat center;
- background-size:cover;
+ height:auto;
+}
+.hero-banner img{
+ width:100%;
+ display:block;
  border-bottom:3px solid #8a2eff;
  box-shadow:0 0 25px #8a2eff;
 }
 
-/* ========== SECTION HEADING ========== */
+/* SECTION TITLES */
 h2{
  font-size:26px;
  color:#d9b8ff;
@@ -77,7 +79,7 @@ h2{
  margin-bottom:15px;
 }
 
-/* ========== FEATURED WORK ========== */
+/* FEATURED */
 .feature-box{
  width:100%;
  background:#0d0d0d;
@@ -91,7 +93,7 @@ h2{
  border-radius:12px;
 }
 
-/* ========== SERVICES ========== */
+/* SERVICES */
 .service-card{
  background:rgba(20,20,20,0.8);
  backdrop-filter:blur(6px);
@@ -103,7 +105,7 @@ h2{
  box-shadow:0 0 15px #8a2eff50;
 }
 
-/* ========== GALLERY ========== */
+/* GALLERY */
 .gallery-grid{
  display:grid;
  grid-template-columns:repeat(2,1fr);
@@ -120,7 +122,7 @@ h2{
  box-shadow:0 0 20px #8a2eff;
 }
 
-/* ========== CONTACT BOX ========== */
+/* CONTACT */
 .contact-box{
  background:#0d0d0d;
  border:2px solid #8a2eff;
@@ -148,7 +150,7 @@ button{
  box-shadow:0 0 12px #8a2eff;
 }
 
-/* ========== WHATSAPP FLOAT ========== */
+/* WHATSAPP FLOAT */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -176,7 +178,10 @@ button{
 <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero-banner" id="home"></div>
+<!-- NEW BANNER FIXED -->
+<div class="hero-banner" id="home">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000aaa471fdaabf3530042e856b.png">
+</div>
 
 <section id="featured">
 <h2>Featured Work</h2>
@@ -197,6 +202,11 @@ button{
 <h2>Gallery</h2>
 
 <div class="gallery-grid">
+
+ <!-- NEW POSTER ADDED HERE -->
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
+
+ <!-- OLD IMAGES -->
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000049f472079083fffc141f3eda.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000769c7230853e1deb70bf32c2.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007c9071fd8ebb34a359a3f55a.png">
@@ -209,64 +219,16 @@ button{
 
 <section id="contact">
 <h2>Contact / WhatsApp</h2>
-
 <div class="contact-box">
 <input id="name" placeholder="Your Name">
 <input id="work" placeholder="Your Project">
-
 <button onclick="sendMsg()">Send WhatsApp Message</button>
 </div>
 </section>
 
-<!-- WHATSAPP FLOAT -->
 <a class="whatsapp" href="https://wa.me/916395463738" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
-
-<!-- FOOTER PRO -->
-<footer style="
-    margin-top:40px;
-    background:#050005;
-    padding:25px;
-    text-align:center;
-    border-top:3px solid #8a2eff;
-    box-shadow:0 -5px 25px #8a2eff;
-">
-
-    <h3 style="
-        margin:0;
-        font-size:22px;
-        background:linear-gradient(90deg,#8a2eff,#ffffff,#4db8ff);
-        -webkit-background-clip:text;
-        color:transparent;
-    ">
-        ASHEESH STUDIO OFFICIAL
-    </h3>
-
-    <p style="margin-top:6px;font-size:14px;color:#d9b8ff;">
-        Premium Music • Mixing • Mastering • Posters • Production
-    </p>
-
-    <div style="margin-top:15px;">
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="28"
-        style="filter:drop-shadow(0 0 8px #8a2eff);"></a>
-
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" width="28"
-        style="filter:drop-shadow(0 0 8px #8a2eff);"></a>
-
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="28"
-        style="filter:drop-shadow(0 0 8px #8a2eff);"></a>
-    </div>
-
-    <p style="margin-top:18px;color:#b385ff;font-size:13px;">
-        📩 Email: asheeshsarkar0@gmail.com
-    </p>
-
-    <p style="margin-top:10px;color:#9668ff;font-size:12px;">
-        © 2026 Asheesh Studio | All Rights Reserved.
-    </p>
-
-</footer>
 
 <script>
 function sendMsg(){
@@ -278,4 +240,4 @@ function sendMsg(){
 </script>
 
 </body>
- </html>
+</html>
