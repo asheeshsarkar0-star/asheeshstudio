@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Intro</title>
+
+<style>
+body {
+  margin:0;
+  padding:0;
+  background:#000;
+  overflow:hidden;
+  font-family:Arial;
+  color:#fff;
+}
+
+/* NEON BORDER ANIMATION */
+.neon-border {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  pointer-events:none;
+  border:3px solid transparent;
+  animation:borderGlow 3s infinite linear;
+}
+@keyframes borderGlow {
+  0% { box-shadow:0 0 20px #8a2eff; }
+  50% { box-shadow:0 0 40px #4db8ff; }
+  100% { box-shadow:0 0 20px #8a2eff; }
+}
+
+/* CENTER CONTENT */
+.center-box {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+}
+
+.center-box img {
+  width:140px;
+  filter:drop-shadow(0 0 18px #8a2eff);
+  animation:logoPop 1.6s ease-out forwards;
+}
+@keyframes logoPop {
+  0% { transform:scale(0.2); opacity:0; }
+  100% { transform:scale(1); opacity:1; }
+}
+
+h1 {
+  font-size:32px;
+  margin-top:18px;
+  opacity:0;
+  animation:titleFade 1.6s ease forwards 0.8s;
+  background:linear-gradient(90deg,#8a2eff,#ffffff,#4db8ff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+@keyframes titleFade {
+  0% { opacity:0; transform:translateY(12px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+
+/* ENTER BUTTON */
+.enter-btn {
+  margin-top:30px;
+  padding:14px 30px;
+  font-size:20px;
+  background:#8a2eff;
+  border:none;
+  border-radius:12px;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 0 15px #8a2eff;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow:0 0 15px #8a2eff; }
+  50% { box-shadow:0 0 30px #8a2eff; }
+  100% { box-shadow:0 0 15px #8a2eff; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="neon-border"></div>
+
+<div class="center-box">
+  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000027e471faa86a9842ff80a567.png">
+
+  <h1>ASHEESH STUDIO OFFICIAL</h1>
+
+  <button class="enter-btn" onclick="enterSite()">ENTER STUDIO</button>
+</div>
+
+<script>
+function enterSite(){
+  window.location.href = "index.html";  // main site
+}
+</script>
+
+</body>
+</html>
