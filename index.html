@@ -3,9 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asheesh Studio Official</title>
 
-<meta name="theme-color" content="#000000">
+<title>Asheesh Studio Official | Music • Posters • Production</title>
+
+<!-- SEO -->
+<meta name="description" content="Asheesh Studio - Professional Lyrics Writing, Music Production, Mixing, Mastering, Posters & Full Song Production.">
+<meta name="keywords" content="Asheesh Studio, Music Studio, Asheesh Sarkar, Lyrics Writing, Song Production, Mixing, Mastering, Posters, Album Art">
+<meta name="author" content="Asheesh Sarkar">
+<meta property="og:title" content="Asheesh Studio Official">
+<meta property="og:description" content="Premium Music Production • Lyrics • Editing • Posters">
+<meta property="og:image" content="icon-512.png">
+<meta name="theme-color" content="#8a2eff">
+
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-512.png">
@@ -20,7 +29,7 @@ body {
  overflow-x:hidden;
 }
 
-/* ========== HEADER ========== */
+/* HEADER */
 header {
  background:#000;
  padding:15px;
@@ -32,11 +41,17 @@ header {
 }
 header img{
  width:130px;
- border-radius:22px;
- box-shadow:0 0 30px #9d4bff;
+ border-radius:20px;
+ box-shadow:0 0 25px #8a2eff;
+ transform:translateZ(0);
+ transition:0.3s;
+}
+header img:hover{
+ transform:scale(1.08);
+ box-shadow:0 0 40px #b56dff;
 }
 
-/* ========== NAVBAR ========== */
+/* NAVBAR */
 nav{
  background:#000;
  text-align:center;
@@ -48,67 +63,70 @@ nav{
 }
 nav a{
  color:#cba6ff;
- font-weight:bold;
  margin:0 15px;
+ font-weight:bold;
  text-decoration:none;
- transition:0.2s;
+ transition:.2s;
 }
 nav a:hover{
  color:#fff;
- text-shadow:0 0 10px #8a2eff;
+ text-shadow:0 0 12px #8a2eff;
 }
 
-/* ========== HERO BANNER (OLD BANNER) ========== */
+/* HERO BANNER */
 .hero-banner{
  width:100%;
- height:340px;
- background:url("https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png") no-repeat center;
- background-size:cover;
+ height:320px;
+ background:url('https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png') center/cover no-repeat;
  border-bottom:3px solid #8a2eff;
  box-shadow:0 0 25px #8a2eff;
 }
 
-/* ========== SECTION HEADING ========== */
+/* SECTION TITLE */
 h2{
  font-size:26px;
  color:#d9b8ff;
  border-left:5px solid #8a2eff;
  padding-left:10px;
- margin-top:25px;
- margin-bottom:15px;
+ margin-top:30px;
 }
 
-/* ========== FEATURED WORK ========== */
+/* FEATURED WORK */
 .feature-box{
- width:100%;
  background:#0d0d0d;
  border:2px solid #8a2eff;
  border-radius:12px;
  padding:12px;
- box-shadow:0 0 15px #8a2eff80;
+ margin-top:10px;
+ box-shadow:0 0 20px #8a2eff60;
 }
 .feature-box img{
  width:100%;
  border-radius:12px;
 }
 
-/* ========== SERVICES ========== */
+/* SERVICES */
 .service-card{
- background:rgba(20,20,20,0.8);
- backdrop-filter:blur(6px);
+ background:#0d0d0d;
  border:2px solid #8a2eff;
- border-radius:15px;
+ border-radius:14px;
  padding:15px;
- font-size:18px;
  margin-bottom:12px;
- box-shadow:0 0 15px #8a2eff50;
+ font-size:18px;
+ box-shadow:0 0 18px #8a2eff40;
+ transition:0.3s;
+}
+.service-card:hover{
+ transform:scale(1.03);
+ box-shadow:0 0 30px #a970ff;
 }
 
-/* ========== GALLERY GRID ========== */
+/* GALLERY */
 .gallery-grid{
  display:grid;
  grid-template-columns:repeat(2,1fr);
  gap:12px;
+ margin-top:10px;
 }
 .gallery-grid img{
  width:100%;
@@ -117,16 +135,17 @@ h2{
  transition:0.3s;
 }
 .gallery-grid img:hover{
- transform:scale(1.05);
- box-shadow:0 0 20px #8a2eff;
+ transform:scale(1.08);
+ box-shadow:0 0 25px #a870ff;
 }
 
-/* ========== CONTACT BOX ========== */
+/* CONTACT BOX */
 .contact-box{
  background:#0d0d0d;
  border:2px solid #8a2eff;
  padding:20px;
  border-radius:15px;
+ margin-top:15px;
 }
 input{
  width:100%;
@@ -145,11 +164,10 @@ button{
  color:#fff;
  font-size:18px;
  border-radius:10px;
- margin-top:8px;
  box-shadow:0 0 12px #8a2eff;
 }
 
-/* ========== WHATSAPP FLOAT ========== */
+/* WHATSAPP FLOAT */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -160,27 +178,49 @@ button{
  box-shadow:0 0 12px #25D366;
 }
 .whatsapp img{width:42px;}
+
+/* FOOTER */
+footer{
+ margin-top:40px;
+ background:#050005;
+ padding:25px;
+ text-align:center;
+ border-top:3px solid #8a2eff;
+ box-shadow:0 -5px 25px #8a2eff;
+}
+footer h3{
+ background:linear-gradient(90deg,#8a2eff,#ffffff,#4db8ff);
+ -webkit-background-clip:text;
+ color:transparent;
+}
+footer img{
+ filter:drop-shadow(0 0 10px #8a2eff);
+ margin:0 8px;
+}
 </style>
 </head>
 
 <body>
 
-<!-- ========== HEADER WITH NEW BANNER ICON ========== -->
+<!-- HEADER ICON BANNER -->
 <header>
 <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000aaa471fdaabf3530042e856b.png">
 </header>
 
+<!-- NAVIGATION -->
 <nav>
 <a href="#home">Home</a>
 <a href="#featured">Featured</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
+<a href="pay.html">Payment</a>
 </nav>
 
-<!-- ========== OLD MAIN BANNER REMAINS SAME ========== -->
+<!-- MAIN BANNER -->
 <div class="hero-banner" id="home"></div>
 
+<!-- FEATURED -->
 <section id="featured">
 <h2>Featured Work</h2>
 <div class="feature-box">
@@ -188,6 +228,7 @@ button{
 </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
 <h2>Services</h2>
 <div class="service-card">🎵 Professional Lyrics Writing</div>
@@ -196,9 +237,9 @@ button{
 <div class="service-card">🔥 Full Song Production</div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery">
 <h2>Gallery</h2>
-
 <div class="gallery-grid">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000049f472079083fffc141f3eda.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000769c7230853e1deb70bf32c2.png">
@@ -207,15 +248,12 @@ button{
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000965c71f8baaeec6fcbbafa44.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000009b0471fd85ccba85cb158a1f.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000b31c7207aedc5b8af50a81e4.png">
-
- <!-- ADDITIONAL POSTER YOU SHARED -->
- <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact / WhatsApp</h2>
-
 <div class="contact-box">
 <input id="name" placeholder="Your Name">
 <input id="work" placeholder="Your Project">
@@ -224,6 +262,7 @@ button{
 </div>
 </section>
 
+<!-- WHATSAPP FLOAT -->
 <a class="whatsapp" href="https://wa.me/916395463738" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
@@ -233,10 +272,22 @@ function sendMsg(){
  let n=document.getElementById("name").value;
  let w=document.getElementById("work").value;
  let text=`Hello, I am ${n}. I need ${w}.`;
-
  window.open(`https://wa.me/916395463738?text=${encodeURIComponent(text)}`);
 }
 </script>
+
+<!-- FOOTER -->
+<footer>
+<h3>ASHEESH STUDIO OFFICIAL</h3>
+<p>Premium Music • Mixing • Mastering • Posters • Production</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="28">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" width="28">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="28">
+
+<p style="margin-top:10px;">📩 Email: asheeshsarkar0@gmail.com</p>
+<p style="font-size:12px;margin-top:8px;">© 2026 Asheesh Studio | All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
