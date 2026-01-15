@@ -6,101 +6,149 @@
 <title>Asheesh Studio Official</title>
 
 <meta name="theme-color" content="#000000">
-<meta name="color-scheme" content="dark">
-
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-512.png">
 
 <style>
-html, body {
- margin: 0;
- padding: 0;
- background: #000 !important;
- color: #fff;
- font-family: Arial;
+body {
+ margin:0;
+ padding:0;
+ background:#000;
+ color:#fff;
+ font-family:Arial;
+ overflow-x:hidden;
 }
 
-/* POPUP */
-#popup{
-position:fixed;
-top:20px;
-right:-400px;
-background:#7a00ff;
-padding:15px;
-border-radius:10px;
-color:#fff;
-z-index:999;
-transition:0.5s;
-box-shadow:0 0 15px #7a00ff;
-}
-#popup.show{right:20px;}
-
-/* FIXED BLACK HEADER */
-header{
- background:#000;           /* PURE BLACK */
- padding:18px;
+/* ========== HEADER ========== */
+header {
+ background:#000;
+ padding:15px;
  text-align:center;
- border-bottom:2px solid #7a00ff;
-}
-
-/* HEADER TEXT */
-header h1{
- background:linear-gradient(90deg,#d28dff,#ffffff,#d28dff);
- -webkit-background-clip:text;
- color:transparent;
- font-size:30px;
-}
-
-/* FIX NAVBAR */
-nav{
- background:#000;      /* PURE BLACK */
- text-align:center;
- padding:10px;
- border-bottom:2px solid #7a00ff;
+ border-bottom:2px solid #8a2eff;
  position:sticky;
  top:0;
- z-index:50;
+ z-index:1000;
+}
+header img{
+ width:55px;
+ filter:drop-shadow(0 0 8px #8a2eff);
+}
+
+/* ========== NAVBAR ========== */
+nav{
+ background:#000;
+ text-align:center;
+ border-bottom:2px solid #8a2eff;
+ padding:12px;
+ position:sticky;
+ top:75px;
+ z-index:999;
 }
 nav a{
- color:#b785ff;
- text-decoration:none;
- margin:0 15px;
- font-size:17px;
+ color:#cba6ff;
  font-weight:bold;
+ margin:0 15px;
+ text-decoration:none;
+ transition:0.2s;
+}
+nav a:hover{
+ color:#fff;
+ text-shadow:0 0 10px #8a2eff;
 }
 
-/* HERO FIX */
-.hero{
- background:#0b0b0b;    /* NO PURPLE */
- text-align:center;
- padding:35px;
- border-bottom:1px solid #7a00ff;
-}
-.hero h2{
- font-size:28px;
- color:#d5a7ff;
+/* ========== HERO BANNER ========== */
+.hero-banner{
+ width:100%;
+ height:340px;
+ background:url("https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png") no-repeat center;
+ background-size:cover;
+ border-bottom:3px solid #8a2eff;
+ box-shadow:0 0 25px #8a2eff;
 }
 
-/* SECTION */
-section{padding:22px;}
+/* ========== SECTION HEADING ========== */
 h2{
- color:#c48fff;
- border-left:4px solid #7a00ff;
+ font-size:26px;
+ color:#d9b8ff;
+ border-left:5px solid #8a2eff;
  padding-left:10px;
+ margin-top:25px;
  margin-bottom:15px;
 }
 
-.box{
+/* ========== FEATURED WORK ========== */
+.feature-box{
+ width:100%;
  background:#0d0d0d;
- padding:17px;
+ border:2px solid #8a2eff;
  border-radius:12px;
- border:2px solid #7a00ff;
- margin-bottom:12px;
- box-shadow:0 0 12px #7a00ff55;
+ padding:12px;
+ box-shadow:0 0 15px #8a2eff80;
+}
+.feature-box img{
+ width:100%;
+ border-radius:12px;
 }
 
-/* WHATSAPP BUTTON */
+/* ========== SERVICES ========== */
+.service-card{
+ background:rgba(20,20,20,0.8);
+ backdrop-filter:blur(6px);
+ border:2px solid #8a2eff;
+ border-radius:15px;
+ padding:15px;
+ font-size:18px;
+ margin-bottom:12px;
+ box-shadow:0 0 15px #8a2eff50;
+}
+
+/* ========== GALLERY ========== */
+.gallery-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
+}
+.gallery-grid img{
+ width:100%;
+ border-radius:12px;
+ border:2px solid #8a2eff;
+ transition:0.3s;
+}
+.gallery-grid img:hover{
+ transform:scale(1.05);
+ box-shadow:0 0 20px #8a2eff;
+}
+
+/* ========== CONTACT BOX ========== */
+.contact-box{
+ background:#0d0d0d;
+ border:2px solid #8a2eff;
+ padding:20px;
+ border-radius:15px;
+}
+input{
+ width:100%;
+ padding:12px;
+ margin-bottom:10px;
+ background:#000;
+ border:1px solid #8a2eff;
+ border-radius:8px;
+ color:#fff;
+}
+button{
+ width:100%;
+ padding:12px;
+ background:#8a2eff;
+ border:none;
+ color:#fff;
+ font-size:18px;
+ border-radius:10px;
+ margin-top:8px;
+ box-shadow:0 0 12px #8a2eff;
+}
+
+/* ========== WHATSAPP FLOAT ========== */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -108,59 +156,65 @@ h2{
  background:#25D366;
  padding:14px;
  border-radius:50%;
- box-shadow:0 0 15px #25D366;
+ box-shadow:0 0 12px #25D366;
 }
-.whatsapp img{width:40px;}
+.whatsapp img{width:42px;}
 </style>
 </head>
 
 <body>
 
-<div id="popup">Message Sent Successfully!</div>
-
 <header>
-<h1>ASHEESH STUDIO OFFICIAL</h1>
+<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000027e471faa86a9842ff80a567.png">
 </header>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="payment.html">Payment</a>
+<a href="#home">Home</a>
+<a href="#featured">Featured</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">
-<h2>Premium Music Production Studio</h2>
-<p>Lyrics • Recording • Mixing • Posters</p>
+<div class="hero-banner" id="home"></div>
+
+<section id="featured">
+<h2>Featured Work</h2>
+<div class="feature-box">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000afcc7207a4d6a69a5b1517fb.png">
 </div>
+</section>
 
 <section id="services">
 <h2>Services</h2>
+<div class="service-card">🎵 Professional Lyrics Writing</div>
+<div class="service-card">🎧 Mixing & Mastering</div>
+<div class="service-card">🎬 Posters & Thumbnails</div>
+<div class="service-card">🔥 Full Song Production</div>
+</section>
 
-<div class="box">🎵 Lyrics Writing</div>
-<div class="box">🎧 Mixing & Mastering</div>
-<div class="box">🎬 Posters & Thumbnails</div>
-<div class="box">📱 Full Song Production</div>
+<section id="gallery">
+<h2>Gallery</h2>
 
+<div class="gallery-grid">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000049f472079083fffc141f3eda.png">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000769c7230853e1deb70bf32c2.png">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007c9071fd8ebb34a359a3f55a.png">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007f1071fd8ee5386f380d665b.png">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000965c71f8baaeec6fcbbafa44.png">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000009b0471fd85ccba85cb158a1f.png">
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000b31c7207aedc5b8af50a81e4.png">
+</div>
 </section>
 
 <section id="contact">
-<h2>Auto WhatsApp Message</h2>
+<h2>Contact / WhatsApp</h2>
 
-<div class="box">
-<input id="name" placeholder="Your Name" style="width:100%;padding:10px;margin-bottom:10px;">
-<input id="work" placeholder="Your Project" style="width:100%;padding:10px;margin-bottom:10px;">
+<div class="contact-box">
+<input id="name" placeholder="Your Name">
+<input id="work" placeholder="Your Project">
 
-<button onclick="sendMsg()" style="
-width:100%;
-padding:12px;
-background:#7a00ff;
-border:none;
-color:#fff;
-border-radius:10px;
-font-size:18px;">
-Send WhatsApp Message
-</button>
+<button onclick="sendMsg()">Send WhatsApp Message</button>
 </div>
 </section>
 
@@ -169,23 +223,12 @@ Send WhatsApp Message
 </a>
 
 <script>
-if("serviceWorker" in navigator){
- navigator.serviceWorker.register("service-worker.js");
-}
-
-function popup(){
- document.getElementById("popup").classList.add("show");
- setTimeout(()=>{document.getElementById("popup").classList.remove("show");},2500);
-}
-
 function sendMsg(){
  let n=document.getElementById("name").value;
  let w=document.getElementById("work").value;
-
- let text=`Hello, I am ${n}. I want ${w}.`;
+ let text=`Hello, I am ${n}. I need ${w}.`;
 
  window.open(`https://wa.me/916395463738?text=${encodeURIComponent(text)}`);
- popup();
 }
 </script>
 
