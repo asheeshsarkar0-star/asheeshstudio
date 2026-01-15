@@ -20,7 +20,7 @@ body {
  overflow-x:hidden;
 }
 
-/* HEADER */
+/* ========== HEADER ========== */
 header {
  background:#000;
  padding:15px;
@@ -31,18 +31,19 @@ header {
  z-index:1000;
 }
 header img{
- width:55px;
- filter:drop-shadow(0 0 8px #8a2eff);
+ width:130px;
+ border-radius:22px;
+ box-shadow:0 0 30px #9d4bff;
 }
 
-/* NAVBAR */
+/* ========== NAVBAR ========== */
 nav{
  background:#000;
  text-align:center;
  border-bottom:2px solid #8a2eff;
  padding:12px;
  position:sticky;
- top:75px;
+ top:110px;
  z-index:999;
 }
 nav a{
@@ -57,19 +58,17 @@ nav a:hover{
  text-shadow:0 0 10px #8a2eff;
 }
 
-/* NEW BANNER */
+/* ========== HERO BANNER (OLD BANNER) ========== */
 .hero-banner{
  width:100%;
- height:auto;
-}
-.hero-banner img{
- width:100%;
- display:block;
+ height:340px;
+ background:url("https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000066f0720795093ae093469a60.png") no-repeat center;
+ background-size:cover;
  border-bottom:3px solid #8a2eff;
  box-shadow:0 0 25px #8a2eff;
 }
 
-/* SECTION TITLES */
+/* ========== SECTION HEADING ========== */
 h2{
  font-size:26px;
  color:#d9b8ff;
@@ -79,7 +78,7 @@ h2{
  margin-bottom:15px;
 }
 
-/* FEATURED */
+/* ========== FEATURED WORK ========== */
 .feature-box{
  width:100%;
  background:#0d0d0d;
@@ -93,7 +92,7 @@ h2{
  border-radius:12px;
 }
 
-/* SERVICES */
+/* ========== SERVICES ========== */
 .service-card{
  background:rgba(20,20,20,0.8);
  backdrop-filter:blur(6px);
@@ -105,7 +104,7 @@ h2{
  box-shadow:0 0 15px #8a2eff50;
 }
 
-/* GALLERY */
+/* ========== GALLERY GRID ========== */
 .gallery-grid{
  display:grid;
  grid-template-columns:repeat(2,1fr);
@@ -122,7 +121,7 @@ h2{
  box-shadow:0 0 20px #8a2eff;
 }
 
-/* CONTACT */
+/* ========== CONTACT BOX ========== */
 .contact-box{
  background:#0d0d0d;
  border:2px solid #8a2eff;
@@ -150,7 +149,7 @@ button{
  box-shadow:0 0 12px #8a2eff;
 }
 
-/* WHATSAPP FLOAT */
+/* ========== WHATSAPP FLOAT ========== */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -166,8 +165,9 @@ button{
 
 <body>
 
+<!-- ========== HEADER WITH NEW BANNER ICON ========== -->
 <header>
-<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000027e471faa86a9842ff80a567.png">
+<img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000aaa471fdaabf3530042e856b.png">
 </header>
 
 <nav>
@@ -178,10 +178,8 @@ button{
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- NEW BANNER FIXED -->
-<div class="hero-banner" id="home">
- <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000aaa471fdaabf3530042e856b.png">
-</div>
+<!-- ========== OLD MAIN BANNER REMAINS SAME ========== -->
+<div class="hero-banner" id="home"></div>
 
 <section id="featured">
 <h2>Featured Work</h2>
@@ -202,11 +200,6 @@ button{
 <h2>Gallery</h2>
 
 <div class="gallery-grid">
-
- <!-- NEW POSTER ADDED HERE -->
- <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
-
- <!-- OLD IMAGES -->
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_0000000049f472079083fffc141f3eda.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000769c7230853e1deb70bf32c2.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000007c9071fd8ebb34a359a3f55a.png">
@@ -214,14 +207,19 @@ button{
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000965c71f8baaeec6fcbbafa44.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000009b0471fd85ccba85cb158a1f.png">
  <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_00000000b31c7207aedc5b8af50a81e4.png">
+
+ <!-- ADDITIONAL POSTER YOU SHARED -->
+ <img src="https://raw.githubusercontent.com/asheeshsarkar0-star/asheeshstudio/refs/heads/main/file_000000000b087207b62f50e92555afa3.png">
 </div>
 </section>
 
 <section id="contact">
 <h2>Contact / WhatsApp</h2>
+
 <div class="contact-box">
 <input id="name" placeholder="Your Name">
 <input id="work" placeholder="Your Project">
+
 <button onclick="sendMsg()">Send WhatsApp Message</button>
 </div>
 </section>
@@ -235,6 +233,7 @@ function sendMsg(){
  let n=document.getElementById("name").value;
  let w=document.getElementById("work").value;
  let text=`Hello, I am ${n}. I need ${w}.`;
+
  window.open(`https://wa.me/916395463738?text=${encodeURIComponent(text)}`);
 }
 </script>
